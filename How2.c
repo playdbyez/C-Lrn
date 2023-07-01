@@ -7,4 +7,5 @@ printf("Hell 2 worLd\n");
 }
 
 //compile with:
-// gcc code.c 
+// gcc code.c
+// cc code.c
