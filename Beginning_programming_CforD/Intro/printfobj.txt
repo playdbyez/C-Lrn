@@ -1,0 +1,75 @@
+//Input and Output
+
+input comes from stdin device
+output comes from stdout device
+
+stdin = Keyboard, Operating System, Modem, File
+stdout = Screen, Printer, File
+& = Ampersand in C syntax
+
+:::::::::::::::::::::::::::::::::PRINTF OBJECTS::::::::::::::::::::::::::::::::::::::::
+//TYPES
+%f = floating point
+%d = decimal integer
+%o = octal
+%x = hexadecimal
+%c = character
+%s = string
+%% = itself
+
+//LENGTHS
+%6d = decimal integer 6 characters wide
+%3f = floating point 3 characters wide
+%.2f = floating point 2 characters after decimal
+%6.2f = floating point at least 6 wide and 2 characters after decimal
+
+
+usage>>
+char *tx = "Text!";
+int nu = 6;
+printf("%s %d", tx, nu);
+
+output<<
+Text! 6
+
+
+
+	
+::::::::::::::::::::::::::::::::::::: INPUT / OUTPUT :::::::::::::::::::::::::::::::::::::::
+		
+		
+FORMAT: int puts(const char *s);		
+puts("text")    = outputs only strings/ %s/ double quotes/ variable must be char */ 
+
+
+
+FORMAT: int putchar(int c);
+putchar('A')    = outputs only one character/ single quote/ wont output strings
+
+
+
+FORMAT: int printf(const char *restrict format, ...);
+printf("text")  = outputs text/ indexing enabled 
+
+
+
+FORMAT: int scanf(const char *restrict format,...);
+scanf("%s", i)  = variable must be char i[]/ cuts off after spaces
+
+
+
+FORMAT: c = getc(stdin);
+getc(stdin)     = must have an lvalue/ 
+
+
+
+FORMAT: int getchar(void);
+getchar()       = must have an lvalue/ capture single characters
+
+
+
+FORMAT: char * fgets(char restrict s, int n, FILE restrict stream);
+fgets(var, size, stdin)  	= var must be a char[]/ 
+
+
+
