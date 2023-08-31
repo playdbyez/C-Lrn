@@ -1,0 +1,23 @@
+	
+	
+	WIFI
+Adopted by the IEEE under the Standard Number [802.11]
+
+
+
+
+:: Frequency Bands ::
+
+	802.11a	5GHz			OFDM
+	802.11b	2.4GHz 		DSSS
+	802.11g	2.4GHz			OFDM
+	802.11n	2.4GHz - 5GHz		OFDM / 4x(MIMO)
+	802.11y	3.5GHz - 3.7GHz	OFDM
+			   (Licenced)
+
+
+802.11a operates in the higher 5GHz Unlicensed National Information Infrastructure (U-NII) band.
+802.11b operates in the 2.4GHz Industrial, Scientific, and Medical (ISM) band.
+802.11g operates in the 2.4GHz Industrial, Scientific, and Medical (ISM) band.
+802.11n can operate in ISM and U-NII bands
+When using unlicensed bands, use the U-NII bands at above 5GHz.
