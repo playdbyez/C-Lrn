@@ -1,2 +1,2 @@
->>Compilation
-gcc -o newsum sumnum.c sumstore.c
+Compilation
+>gcc -o newsum sumnum.c sumstore.c
