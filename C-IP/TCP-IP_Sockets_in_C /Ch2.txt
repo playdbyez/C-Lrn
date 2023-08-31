@@ -17,6 +17,7 @@ Network Address Translation rewrites public ip/port pairs to private ip/port pai
 Used by Home networks in order to share a single IP through a (NAT) device.
 Said private IPs cannot be found from the global Internet
 IPv4 = start with 10, 192.168 or 172.16-31
+imgur.com/a/PLHuuJL
 
 //Link-local
 Only used by hosts within the same network, not accessible by outside networks.
