@@ -1,0 +1,161 @@
+//TCP/IP: Network Addresses
+
+IANA handles the allocation of IP addresses.
+IANA delegates other authorities to handle the distribution of addresses to ISPs.
+Regional Internet Registries and the Number Resource Organization are 2 of these authorities.
+They deal with globablly scalled address blocks
+[IP4AS]
+[IP6AS]
+[RFC4948]
+[IP4R]
+
+Individual users typically receive address allocations and traffic routing from their ISP.
+This is done through the ISP providing a fraction of its address-space in the form of a prefix to customers.
+
+Prefixes are then, managed by Provider Aggregatable or Provider-Independent addresses.
+PA addresses are known as non-portable
+PI addresses can be directly requested from authorities and work with any ISP.
+
+
+Database records of ISPs' routing policies come in different langauges like Routing Policy Specification Langauge (RPSL)  
+Within multicast addresses, ISPs make use of Autonomous System (AS) numbers together with their routing protocols.
+IPv4 addresses can be embeded into an IPv6 address within 6 different ways, with the help of an address translator
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+		DNS Conversion
+::::::::::::::::::::::::::::::::::::::::::::::::::
+	Original URL
+	http://ee.lbl.gov/index.html
+
+	IPv4 URL:
+	http://131.243.2.201/index
+
+	IPv6 URL + Port:
+	http://[2001:400:610:102::c9]:443/
+
+
+
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	Possible Variety of Addresses
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+IPv4 = 4,294,967,296
+IPv6 = 340,282,366,920,938,463,463,374,607,431,768,211,456
+
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+			Classful partitioning
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+<Class>	<Address Range>	<Nets>		<Hosts>
+   A		0.0.0.0 - 127.255	128		16,777,216
+   B		128.0.0 - 191.255	16,384		65,536
+   C		192.0.0 - 223.255	2,097,152	256
+   D		224.0.0 - 239.255	--		--	
+   E		240.0.0 - 255.255	--		--
+   
+Classes were created to aid on managing the scalability of the Internet and to help with provder-aggregatable addresses.
+Classful partitioning was however replaced by Inter-domain routing (CIDR) 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+				   Subnet Mask
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+<Decimal>				<Prefix>    	<Class>
+<IPv4>
+128.0.0.0				0/1		
+255.0.0.0				0/8		A
+255.192.0.0				0/10
+255.255.0.0				0/16		B
+255.255.254.0				0/23
+255.255.255.0				0/24		C
+255.255.255.192			0/27		
+255.255.255.255			0/32		
+
+<IPv6>
+
+ffff:ffff:ffff:ffff			/64
+ff00::					/8
+
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		BROADCAST ADDRESS FORMULA
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ IP: 				128.32.1.14
+ Subnet Prefix:		/24
+ Subnet Decimal: 		255.255.255.0
+
+*invert bites of subnet 
+from 				11111111.11111111.11111111.00000000
+to 				00000000.00000000.00000000.11111111
+
+*perform bitwise OR operation between IP bytes and Inverted subnet
+*after performing a bitwise OR operation:
+
+Subnet Broadcast Address 	128.32.1.255
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+Masks are used to sort through the local-network section of an IP address(last 2 octets).
+
+A datagram with the destination to all IPv4 addresses within 128.32.0.0
+would have its address set to: 128.32.255.255
+
+
+A Mask is usually decided opon, based on the size and capability of your network.
+(VLSM) Varaible-Length Subnet Masks aim at providing flexibility to Direct Broadcast addresses and the subnet structure in general
+
+
+
+
+
+
+<:::::::::::::::::::::::::::::::: :ROUTING/TOPOLOGY: :::::::::::::::::::::::::::::::::::::::::::::::::::>
+
+Routers function through the use of routing table entries and maintaining shortest-path routes.
+
+>Routing Table Entry:
+	Router identifies that data is for another network
+	Router inspects datagram in order to find a matching routing entry for routers nearby
+	If the Destination is on the right path, the router will dispatch the data to its next-hop
+	If the Destination is on the wrong path, it will route it to the cloud labeled “Other Parts of the Network.”
+	
+>Shortest-Path	
+	Hierarchical Routing   
+	Topology Sensitive Addressing
+	Random Addressing
+	Route Aggregation
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		AGGREGATION FORMULA
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+To reduce the number of routing entries kept by a router, adjacent IP prefixes are joined together in a smaller prefix number
+
+[host 1]
+	190.157.27.0/26
+					[host 1 + host 2]
+[host 2]				190.154.27.0/25
+	190.154.27.64/26	------>
+				
+[host 3]							
+	190.154.27.192/26	------------------------------>
+							[host 4]
+								190.154.27.128/26
+									--------------------------->
+												[host 4 + host 3]
+													190.154.27.128/25
+															|
+															|
+						<----------------------------------------------------------------------
+				[host 1&2 + host 3&4]
+					190.154.27.0/24
+					
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+The whois command will tell you if any large orgs own any address range
+	http://whois.arin.net/rest/ip/72.1.140.203.txt
+				Then research the IP's parent
+					http://whois.arin.net/rest/net/NET-72-1-128-0-1.txt
