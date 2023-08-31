@@ -1,0 +1,52 @@
+IP
+
+//IPv4
+Can be turned into a ipv6 through IPv4-mapping
+This 'mapped address' is achieved by adding ::ffff: before the IP
+
+//IPv6
+Must contact ISP to enable ipv6 forwarding service
+
+//lo
+Loopback address is used to echoe the transmitted packets back to the sender (always on)
+IPv4 = 127.0.0.1
+IPv6 = 0:0:0:0:0:0:0:1 (::1)
+
+//Private Use
+Network Address Translation rewrites public ip/port pairs to private ip/port pairs 
+Used by Home networks in order to share a single IP through a (NAT) device.
+Said private IPs cannot be found from the global Internet
+IPv4 = start with 10, 192.168 or 172.16-31
+
+//Link-local
+Only used by hosts within the same network, not accessible by outside networks.
+IPv4 = 169.254
+IPv6 = start with FE80, FE90, FEA0, or FEB0
+
+//Multicast
+Multiple destinations at once instead of one, recieving the packet.
+IPv4 = starts with 224-239
+IPv6 = start with FF
+
+//NAC
+Network Access Control
+Used to authenticate devices and services within a network through 
+predefined encryption protocols such as "802.1x  and/or Trusted Network Connect (TNC)"
+NAC is inferior to TNC since it alone cannot auth the endpoint itself but only the boundary to the network in which the application endpoint is located.
+
+//VPN 
+Virtual Private Network 
+Used to authenticate users to recieve a new IP on a remote network in order to access an internal network.
+Traffic is then tunneled from user to network through encapsulation and routing.
+
+//Client 2 Server Connection
+Sockets API handle transmission between both peers.
+The client must know the url address or ip of the server it wishes to contact
+The client must specify which port it wants to contact the website through
+The server may identify the client's address trough the sockets API if necessary.
+The Internet Assigned Number Authority (IANA) dictates general practice with port connections
+[i.e. port 80 = HTTP]
+
+//Peer 2 Peer Connection
+Sockets API handle transmission between both peers.
+Both must initiate connection to reach the same P2P node.
