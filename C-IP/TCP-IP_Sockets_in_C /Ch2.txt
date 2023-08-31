@@ -47,6 +47,6 @@ The server may identify the client's address trough the sockets API if necessary
 The Internet Assigned Number Authority (IANA) dictates general practice with port connections
 [i.e. port 80 = HTTP]
 
-//Peer 2 Peer Connection
+//Peer 2 Peer Connection (PPP)
 Sockets API handle transmission between both peers.
 Both must initiate connection to reach the same P2P node.
