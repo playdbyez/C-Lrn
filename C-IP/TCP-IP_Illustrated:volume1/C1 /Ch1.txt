@@ -1,0 +1,151 @@
+//TCP/IP: Introduction
+
+
+
+					::OSI Model::
+
+HOST		7	Application		End-User
+		6	Presentation		Syntax
+		5	Session		Sync & Send
+		4	Transport		Segment
+	
+INTERNET	3	Network		Packets
+		2	Data-Link		Frames
+		1 	Physical		Bits
+
+Encapsulation emplies that as the data movies down the layers, 
+the data is encapsulated with Opaque data and with a Protocol Data Unit [PDU] from the layer above it and a PDU from the sender layer
+For Identification each layer attaches its PDU label to the data in the form of a Header, a Trailer, or Protocol Identifier[L2]
+Thanks to the data being treated as opaque, each layer promises not to read the PDU sent from above it
+
+
+						::Relavant OSI Layers::
+
+>Network Layer 3
+	Handles packets of information.
+	Implements hop-by-hop protocol
+		*Internet Router
+		*Wifi
+		
+ROUTERS:
+Also known as an Intermediate System, these can be altered to support remote login. 
+Routers can also implement Transport and Application protocols from layers above it in order to act as an all inclusive host.
+
+In the case of TCP its protocol does not preserve message boundaries in order to transmit cut-up packets faster, and so if an application requires message boundaries included, then the application must provide its own.
+
+
+Routing algorithms for packet order and multihop route
+Addressing scheme for ID'ing hosts
+
+
+
+
+> Transport Layer 4TCP
+	Handles application ports
+	Implements End-To-End protocols
+		*TCP
+		*UDP
+		*SCTP
+		*DCCP
+
+
+
+					::TCP/IP Layers::
+
+HOST		7	Application		End User	[HTTP, DNS, DHCP]
+		4	Transport		Segment	[TCP, UDP, SCTP, DCCP]
+		
+INTERNET	3.5	Upper-Network				[IPsec, ICMP, IGMP]
+		3	Network		Packets	[IP, IPv6]
+		2.5	Upper-DataLink		Frames		[ARP, MAC]					
+
+MAC  - Media Access Control address
+ARP  - Address Resolution Protocol
+
+IP   - Internet Protocol
+ICMP - Internet Control Message Protocol
+IGMP - Internet Group Management Protocol
+MLD  - Multicast Listener Discovery protocol (IPv6)
+
+TCP  - Transmission Control Protocol
+UDP  - User Datagram Protocol
+SCTP - Stream Control Transmission Protocol
+DCCP - Datagram Congestion Control Protocol
+
+HTTP - Hyper-Text Transmission Protocol
+DNS  - Domain Name System protocol
+	
+	[Forwarding] - Sending Datagram to next hop
+	[Payload]    - Main data frame passed from L2 to L3
+	
+	[IP address] - Datagram of 32bits in length
+		IP Type 1 - Unicast
+		IP Type 2 - Broadcast
+		IP Type 3 - Multicast
+		
+		
+
+
+					::Recieving Data::
+					
+		()Frame arrives at layer 2<
+			Multi-Access Network address	( 48bit )
+			IPv4 address 			( 32bit )
+			Ipv6 address 			( 128bit )
+			
+			
+			>>Ethernet:
+				Destination Address(48bit)   +   Ethernet Type(16bit)
+				MAC: must match its destination address to the systems receiving address
+				Ethernet Type: which layer protocol its intended to
+			
+			>>Frame has an IP datagram
+				Datagram: IPv4 = 0x0800 / IPv6 0x086DD / ARP 0x0806		
+		
+			
+		()Frame payload passed to Layer 3<
+			>>IP checks for:
+			      Protocol(TCP)	
+			      Datagram(IPv4)
+			      Destination within datagram
+			      Errors in header
+			      Fragmentation, if its necessary the payload will be reassembled from fragments
+		
+		()Packet passed to Layer 4<
+				Checks if protocol requires port number
+				Ports are checked for demultiplexing
+				
+				
+				
+				
+							::Networked Applications::
+			Applications designed with networking in mind are traditionally structured under one of 2 models:
+			>Peer-2-Peer
+			>Client/Server		
+				Whatever the design pattern applications invoke APIs to perform networking tasks. 
+				The most common API for TCP/IP networks is called sockets.
+				
+				
+				
+				
+				
+					:: A T T A C K S ::	      
+		
+	//CACHE POISONING
+
+
+	//ENUMERATION ATTACK
+
+
+	//CIPHER SUITE ROLLBACK ATTACK
+		
+		
+	//IP SPOOFING
+		Moding the source IP address within an IP-datagram packet
+		in order to make Attribution harder to trace
+		
+		
+		
+		
+CHECK
+VENONA System for attacks on security protocols
