@@ -154,6 +154,8 @@ To reduce the number of routing entries kept by a router, adjacent IP prefixes a
 					
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+Reserved IPs
+imgur.com/a/PLHuuJL
 
 The whois command will tell you if any large orgs own any address range
 	http://whois.arin.net/rest/ip/72.1.140.203.txt
