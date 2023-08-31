@@ -1,0 +1,42 @@
+  ::Socket function call from sys/socket header::
+
+>socket(AF_INET, SOCK_STREAM, 0);
+
+Requires 3 paramenters:  
+>[1] Domain (Ipv4 = AddressFamily INET)  
+>[2] Type (TCP = Socket_Stream)  
+>[3] Protocol (0)  
+
+After creating this socket, it will return an int number
+if the int is negative (-1) FAIL
+if the int returned is positive/Zero (0) PASS  
+  
+Additionally, a socket FileDescriptor will be returned 
+Hence it is commonly assigned with an lvalue (int sockFD = socket();)
+
+
+
+Address Families
+>-INET  
+>-ALG  
+>-APPLETALK  
+>-ASH  
+>-ATMPVC  
+>-ATMSVC  
+>-AX25  
+>-BLUETOOTH  
+>-BRIDGE  
+>-CAIF  
+>-CAN  
+>...
+
+Data Types
+>-SOCKET_CLOEXEC  
+>-SOCKET_DCCP  
+>-SOCKET_DGRAM  
+>-SOCKET_NONBLOCK  
+>-SOCKET_PACKET  
+>-SOCKET_RAW  
+>-SOCKET_RDM  
+>-SOCKET_SEQPACKET  
+>...  
