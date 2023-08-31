@@ -1,0 +1,33 @@
+//Port Auditing
+
+
+The Well Known Ports 0 - 1023.
+The Registered Ports 1024 - 49151.
+The Dynamic and Private Ports 49152 - 65535
+
+:::::::::::::::::: :: Identify Ports :: :::::::::::::::::::::::::::::::::::
+$ cat /etc/services 
+//IANA default ports are stored in '/etc/services'
+
+
+$ tail -10 etc/services 
+$ grep -w '443/tcp' /etc/services
+$ grep -E -w '22/(tcp|udp)' /etc/services
+
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::: :: Port Status :: :::::::::::::::::::::::::::::::
+//Socket Statistics
+$ ss -tulpn
+$ ss -s
+
+OUTPUT: 
+	TCP   LISTEN   127.0.0.1:631    [::]:*     cupsd
+	TCP   LISTEN   0.0.0.0:22       [::]:*     sshd
+//Process cupsd is listening on the loopback IP address through port 631
+//Process ssh is listening for ssh connections on all IP addresses through port 22   
+
+
+
+$
