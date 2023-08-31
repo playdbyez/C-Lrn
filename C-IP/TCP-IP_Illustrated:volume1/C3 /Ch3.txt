@@ -1,0 +1,211 @@
+//Link Layer 2
+
+For the Transport layer 4 the link layer's purpose is 
+to send and recieve datagrams for the IP module via tunneling or Point-to-Point-Protocol (PPP)
+while also detecting if other stations send data at the same time. 
+If so, resulting in signal propagation delays or a collision.
+
+Data-link's Protocol Data Units is known as a frame.
+
+A frame's size can vary from from a few bytes to kilobytes,
+its upperbound of size is known as the Maximum Transmission Unit (MTU)
+
+
+
+::::::::::::::::::::: Compatible Hardware :::::::::::::::::::::::::::::
+
+ ---->Wired LAN
+|--Ethernet
+
+ ----> Metropolitan Area Networks (MAN)
+|--Cable TV
+|--DSL
+
+ ---> Wired Telephone
+|--Modem
+|--Serial line
+|--VoIP
+
+ ----> Wireless LAN
+|-Wifi
+|--HSPA
+|--EV-DP
+|--LTE
+|--WiMAX
+
+
+::::::::::::::::::::: IEEE STANDARDS :::::::::::::::::::::::::::::
+
+Ethernet						802.3
+Wifi							802.11
+WiMAX							802.16
+Cellular						802.21
+Logical Link Control					802.2
+
+
+			IMG File Inclusive
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+::ETHERNET::
+"10/Mb Ethernet" was adopted by the IEEE in 1982 under the Standard Number [802.3]
+This standard includes a distributed algorithm implemented in each Ethernet network interface 
+that controls when a station gets to send its data through the cable. 
+This algorithm is called Carrier Sense, Multiple Access with Colision Detection (CSMA/CD)
+because it is part of the Media Access Control (MAC)
+
+CSMA/CD
+If the line is free, send data through
+If line is busy or collision occurs, retry or timeout
+Expect 16 retries before timeout
+
+
+
+::ETHERNET-SWITCHES::
+When enabled CSMA/CD is not required as the ethernet will operate in a full-duplex fashion.
+Uplink-port refers to explanding a LAN via interconected, additional switches being added.
+
+FULL-DUPLEX
+Send and recieve data simultaneously.
+
+HALF-DUPLEX
+Send or recieve data one direction at a time.
+
+
+::::::::::::::::::::::::::::::::: FRAME FORMAT :::::::::::::::::::::::::::::
+
+Frame Types
+
+-Physical Frame  (p)
+-Unicast Frame   (u)
+-Multicast Frame (m)
+-Broadcast Frame (b)
+-ARP Frame       (g)
+-Magic Frame     (a)
+
+
+::ETHERNET FRAME::
+Bits were encoded using a Manchester Phase Encoding with two voltage levels.
+The Preamble is used to determine when a frame is arriving.  
+The clock recovery determines the ammount of time between encoded bits before The Start Frame Delimiter is found.
+
+Next we have the Tags section indicating a field with a length tag or a type tag.
+If the  value in the Length/Type field is less than 1500, the field must contain a length type value however, 
+If the  value in the Length/Type field is bigger or equalt to 1536, the field then indicates a type of, for example, Quality of Service(QoS) tag referrenced by [ETHERTYPES]
+
+
+
+- Preamble pattern = 0xAA
+- Start Frame Delimiter (SFD) pattern = 0xAB 
+- Destination (DST)
+- Source Address (SRC)
+- Type/Length field
+		| 802.1p tags
+		| 802.1q tags
+			| ARP frame type  = 0x0806
+			| IPv4 frame type = 0x0800
+			| IPv6 frame type = 0x86DD
+			| Q-tagged frame  = Virtual Lan ID
+
+
+- Inter-Packet Gap (IPG)
+- Data/ Payload Section = 1500-byte MTU size
+- Frame Check Sequence (CRC32)
+
+
+::::::::::::::::::::::: :: SIZE :: ::::::::::::::::::::::::::::::::::::::::::::
+	64-bytes frame			1518-bytes frame
+-payload 47b			   -header 14B
+-no tag			   -preamble 7B
+			  	   -SFD 1B
+			  	   -MTU 1.5KB
+			  	   -IPG 12B x 10Mb/s or 100Mb/s
+			   	   -CRC 4B
+
+
+Jumbo Frame
+	9000-bytes frame
+
+Super Jumbo Frame
+	9000B+
+	
+	
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ 				
+:: :: QoS :: :: 
+ Implemented only on WIFI 802.11e.
+ Devices supporting QoS capabilities also support non-QoS devices.
+ The QoS facility is usually deployed if the network usage is high or congested. 
+ It handles changes to them 802.11 MAC layer and system interfaces in order to 
+ support Multimedia applications thanks to its low jitter delivery (VoIP, Video Streaming).
+ “high-throughput” stations (called HT STAs) are also QoS stations.
+ 
+ 
+ :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ 				
+:: :: PPP :: ::
+Internet Access over Telephone.
+PPP is a layered protocol that has three components:
+
+1 - An encapsulation component that is used to transmit datagrams over the specified physical layer.
+2 - A Link Control Protocol (LCP) to establish, configure, and test the link as well as negotiate settings, options and the use of features.
+3 - One or more Network Control Protocols (NCP) used to negotiate optional configuration parameters and facilities for the network layer. 
+	There is one NCP for each higher-layer protocol supported by PPP.
+
+PPP permits multiple network layer protocols to operate on the same communication link. 
+For every network layer protocol used, a separate Network Control Protocol (NCP) is provided in order to encapsulate and negotiate options for the multiple network layer protocols
+
+
+
+ ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+::VLAN::
+Link Aggregation Control Protocol (LACP) uses IEEE 802 frames called (LACPDUs)
+Virtual LANs are a network support capability  designed for multiuse switched networks
+These essentially isolate traffic within switches to only specific switches.
+VLAN mapping can be assigned via port numbers , via IP or via MAC
+by assignin a VLAN tag to a frame indicating its QoS level of priority.
+
+<USAGE>
+$ vconfig add eth1 2
+
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+::Link aggregation::
+Occurs by deciding on a specific IP adddress as a bond address with a MASTER tag
+and 2 other network interfaces eth1 &&wlan1 with a SLAVE tag 
+
+<USAGE>
+$ modprobe bonding
+$ ifenslave bond0 eth0 wlan0
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::Wake-On Lan(WOL)::
+Occurs based on the arrival of certain types of packets a host is brought out of sleep.
+
+<USAGE>
+$ ethtool –s eth0 wol umgb
+//This command	tells ethernet to wake up if packets of type unicast, multicast, arp or broadcast arrive.
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+::Magic Packet::
+Magic packets contain a special repeated pattern of the byte value 0xFF.
+
+<USAGE>
+$ wol 00:08:74:93:C8:3C
+//This command	generates a magic packet that can be analyzed with wireShark
+
+
+
+
+Related Research
+$ man tc-ife
+$ man tc
+$ man ethtool eth0
