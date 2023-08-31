@@ -1,0 +1,83 @@
+//BASICS//
+
+
+
+//TCP/IP/UDP are types of protocols from the Protocol suite.
+//Usable within the Internet and within private networks.
+//Must be supplemented with port number
+
+//Data Protocols 
+Networks have to manage several kinds of Protocol Data Units (PDU)s
+IP PDU = IP packet.
+TCP PDU = TCP segment
+APPLICATION PDU = Application PDU 
+EMAIL PDU = RFC-822 message or a single SMTP command
+HTTP PDU =  request or response
+
+
+
+//DATAFLOW
+App > Socket [IP] > port > TCP/UDP > Ethernet > Router > 
+		*TCP>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Making the path through the internet
+
+
+
+//Information
+Data is sent over in packets of information.(byte sequences)
+Packets carry Control Information that complies with the encryption protocol of said Network.
+Control information can also include the packet's destination(IP).
+
+//Protocol
+Solves the problem of decrypting the packet.
+Dictates how said packet is structured and/or encrypted, where the destination info is located within it or how big its supposed to be
+[i.e. HTTP, TCP/IP].
+
+
+
+//Port
+Range from  1 to 65,535 (0 is reserved)
+A port identifies an application's socket for transmission of data.
+
+//IP (Internet Protocol)
+Primary and general method of transport (Layer 2) 
+Host-to-Host transport protocol (USA to UK)
+It requirest best-effort protocol from udp to breakdown packets so it may suffer from packet loss or reordering in the process
+
+//TCP (Transfer Control Protocol)
+Secondary method of transport / Uses ports (Layer 3)
+End-to-End transport protocol (App to App)
+Must establish a handshake before beginning connection
+Fixes lost,duplicate and unordered packets
+'Reliable byte-stream channel' / 'Connection-oriented Protocol'
+
+
+//UDP (User Datagram Protocol)
+Secondary method of transport / Uses ports (Layer 3)
+End-to-End transport protocol (App to App)
+Doesn't fix packets but extends IP's datagram range
+
+//Socket
+An API for managing ports, TCP and UDP which is always open for Applications to plug in and transmit.
+One program can have multiple sockets running simultaneosly
+Multiple programs can use the same socket simultaneously
+Diff sockets = diff protocols = diff stack
+
+//>TCP stream sockets
+End-to-end protocol
+Realiable byte-stream service
+
+//>UDP datagram sockets
+Best-eﬀort datagram service
+Enables individual messages up to 65,500 bytes in length.
+
+
+//DNS (Domain Name System)
+Distributed database that maps IP address of server/host to domain names through the name resolution service (xxx.com)
+
+//Local Configuration Databases
+Also use name resolution service as mapping for server/hosts for Operating systems to recognise.
+
+
+//DMZ
+Demilitarized Zones
+Refers to a quarentine zone for not particularly trusted or authenticated devices
