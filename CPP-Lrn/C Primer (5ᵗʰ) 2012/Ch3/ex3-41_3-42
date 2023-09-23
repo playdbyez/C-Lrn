@@ -1,0 +1,35 @@
+//3.41
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+
+
+int main ()
+{
+int numb[] = {1, 2, 3, 4};
+
+
+vector <int> copied (begin(numb), end(numb));
+
+
+for (auto c: copied)
+{cout << c << " ";}
+
+
+
+//3.42
+
+int bk[copied.size()];
+
+for (size_t g = 0; g< copied.size(); g++)
+{bk[g] = copied[g];}
+
+
+cout << "\n";
+for (auto c: bk)
+{cout << c << " ";}
+
+
+}
