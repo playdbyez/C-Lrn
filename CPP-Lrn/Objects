@@ -1,0 +1,29 @@
+#################
+#### OBJECTS ####
+#################
+
+
+/Visualisation:
+
+int _someName = Jules;
+
+
+int = Type Integer
+some_Name = Variable Identifier
+Jules = an object
+
+
+The int some_Name; 
+is a declared Type (int) with an Identifier(some_Name)as a variable that defines the value (Jules) of the object.
+
+
+Variables:
+
+	>Case Sensitive
+	>Can't use two underscores
+	>Can't begin with an underscore followed by UpperCase
+	>If defined outside a function, Can't begin with underscore
+	>Can't start with Number either ?
+
+
+

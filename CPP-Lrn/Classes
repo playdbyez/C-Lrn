@@ -1,0 +1,35 @@
+####################
+###### CLASSES #####
+####################
+
+------------------------------------------------
+|Classes = 1.Data abstraction & 2.Encapsulation.|
+------------------------------------------------
+
+
+1.Data abstraction = ( implementation + interface)
+
+>>>Data abstraction:
+Programming technique that relies on the sepration of interface and implementation
+
+>>implementation = functions of a class that constitute and define the class which are not intended for general use.
+
+>>interface = consists of the operations that a class can execute, aka, its options and features.
+
+
+
+2.Encapsulation = ( hiden implementation )
+
+>>>Encapsulation enforces only the availability of the inerface to its users and encryption on the implementation.
+
+
+
+
+
+
+
+-------------------------------------------------
+|Class(Abstrac + Encaps) = An abstract data type|
+-------------------------------------------------
+In an abstract data type the focus is on usage and no access to its individual implementation is allowed.
+Leaving users to wonder, abstractly, about the class' composition and implementation.

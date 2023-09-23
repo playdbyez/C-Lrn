@@ -1,0 +1,17 @@
+
+Operators can always be used as a condition for a function.
+[If( y<5; ++y )]
+
+
+( = ) operator for assignment
+[water = an object]
+
+( == ) operator for equality
+[color yellow == color gold]
+
+( += ) operator for compound assignment
+[x+=y is the same as x = x+y]
+
+
+( != ) operator for inequality
+[north != down]

@@ -1,0 +1,35 @@
+
+###############################
+  int	MAIN Composition
+##############################
+
+>>Compiler Directive points to a standard library header
+
+
+:#include <-[directive] | <fsstream> <-[header]
+
+
+>>Function Code Structure
+
+[return type]-> int | main <-[function name] | () <-[Parameter list]
+
+[function body]-> {  | if.blah.print blah.calculate blah.return  <-[Block of statements] 
+
+[operand]-> cin | >> <-[operator]
+[expression]-> cout <<  2;
+[return of type int]-> return 0;
+
+
+[function body]-> } 
+
+
+:The 'header' must be single-line and be outside any function.
+:The 'int main()' function requires a return of type 'int' which is '0' in this case.
+:The value returned from main is a status indicator. 
+:0 = success  non-0 = error defined by the system.
+:input data is stored in variables, variables have a type (int,float,double,bool,real,etc)
+:SourceFile.suffixes can be (.cpp/ .cc/ .cxx/ .c/ .c)
+
+:C++ does not define input/output statements instead, C++ includes a standard library provided by libHeaders that provides IO capabilities.
+
+

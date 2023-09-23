@@ -1,0 +1,103 @@
+Dr. Quinn Notes:
+
+			.::Chapter I::.
+Application Programming Interface(API) = Your Desktop writing to disk.
+Application Binary Interface(ABI) =  system call to disk 
+Operating System(OS) = handles API commands and ABI addresses
+
+Interrupts make system calls.
+
+System set of interacting or independent ports
+System Programming = writting system softwr
+System Software = supporting application softwr
+
+System software examples:
+Compiles
+Linkers
+Loaders
+
+Firmware
+Operating systm
+
+Static libraries: libraries that are linked at compile time
+Dynamic libraries: libraries that are linked at load time
+
+
+Type safety refers to protections put in place to
+prevent one type from being confused with another type.
+
+
+C++ is basically better but more constricted
+C++ is a type-safe lang
+
+C is more freeform but unforgiving of mistakes/leaky code
+C is not  a type-safe lang
+
+
+
+
+			.::Chapter II::.
+C standard is managed by the International Organization for Standardization(IOS)
+
+The standard's specification is devided into 3 sections:
+	==> )Environment
+	==> )Language
+	==> )Libraries
+
+1)Environment dictates the standard for compiler functions, such as minimum limitations, program linking and program start-up requirements.
+I.E. minimum number of nested if() statements supported.
+
+
+2)Language dictates the details associated with the syntax, variable and function definitions as well as flow-control operators and regular operators.
+
+3)Libraries dictates the allocating of memory, time management, output of strings and handling of the language's standard libraries.
+
+
+
+
+
+When compiling a C-program with the --verbose option we can note how the program is linked to:
+
+
+-lc
+flag tells the linker to link in libc.
+
+-lgcc_s
+A static library that is linked to 'exception unwinding' and compiler support for 64-bit operations on a 32-bit CPU. 
+
+
+
+-Scrt1.o
+-crti.o
+-crtbeginS.o
+-crtendS.o
+-crtn.o
+C Run-time Libraries(CRT) responsible for bootstraping your application with providing the '_start' function, executing constructors and deconstructors, setting up unwinding support.
+
+Resulting in a compiled 'object file' containing the source code of instructions for execution by the kernel.
+
+
+compiling a c code then applying an object dum will reveal the compiled source code of the object file in binary
+
+$ gcc test -o a.out
+$ objdump -d a.out
+
+
+
+
+====== SKIPPED A LOT OF PAGES ========
+
+INTEL CPU
+is a CISC (Complex Instruction Set Computer) system as opposed to a RISC (Reduced Instruction Set Computer) system.
+Meaning that Intel's 
+ISA (Instruction Set Architecture)
+provides the processor the ability to perform
+ALU operations (Arithmetic Logic Unit)
+Memory-based operations at byte level
+Intel assembly and compiler instructions.
+
+
+
+
+
+

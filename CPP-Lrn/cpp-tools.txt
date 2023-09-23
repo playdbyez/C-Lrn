@@ -1,0 +1,46 @@
+C plusplus Tools
+
+Types:
+	unsigned	//positives online
+	short		//
+	int		//
+	long		//
+	long long	//
+
+	float		//
+	double		//
+
+	bool		// True or False
+	char		//
+	string		//
+	void		//
+	vector<int>	//
+	arr[]		//
+	const		// unchangable type
+	#define	//
+	
+	int a = 3;
+  	decltype(a) b = a;  // `b` is `int`
+  	decltype((b)) c = a;  // `c` is `int &` to a
+  
+  	typeid(a).name() // returns the type of object 'a'
+	
+	
+	int expl;
+	void *pointer = &expl;
+	int *pntr = &expl;
+	int &expl = 1;
+	
+	
+	
+Operators:
+	+=
+	-=
+	++
+	--
+	<<
+	>>
+	::
+	
+	;
+

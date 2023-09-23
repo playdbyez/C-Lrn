@@ -1,0 +1,53 @@
+
+			####################
+			####   C++ 101  ####
+			####################
+
+In practice, C++ simply suplies the mechanisms for defining new data structures.
+ 
+				1.Bilt-in object types. (exists)
+				2.Operation operators.  (becomes)
+				3.Statements of flow.	 (does)
+			 	
+Most programming languages depend on the type of an object to limit its possible operations.
+
+In the case of statements, which are executed sequentially one statement after the other, only certain types of objects complement certain statements of control.
+ 
+Once joined, a matching statement together with an object type will result in an expression.
+
+Classes can be implemented to define new object types, resulting in a class type.
+
+C++ allows classes to make use of types that include operations as well as data.
+
+
+
+
+Statements:				Types:				Operators
+
+	if				int				++
+	else				float				<
+	for				char				==
+	while				bool				=
+	switch				void
+	throw				vector
+	try				double
+	break				string
+	do while
+	continue
+	goto
+	
+	
+
+Expressions:
+	
+	if(a<b)
+	while(true)
+	for(int a; a<=10; ++a)
+	else
+	
+
+
+
+
+	
+
