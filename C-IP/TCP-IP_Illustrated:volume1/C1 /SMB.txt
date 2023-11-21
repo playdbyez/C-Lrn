@@ -1,0 +1,3 @@
+Server Message Block Protocol (SMBP)
+Windows always inclides an SMB client 
+Samba is a tool that makes use of the SMB protocol to make Unix to windows communication more convenient
