@@ -1,0 +1,26 @@
+
+Heterogenous Network
+// Different computer models on the same network
+      Stateful Network
+      >Requests on a network are numbered
+      
+      Stateless Network 
+      > Requests are idempotent (not numbered)
+
+
+Distributed Processing
+//Spreading a process across SEPARATE memories while following a distributed system architecture
+
+Parallel Processing
+// Spreading a process across separate processors that share the same SINGULAR memory location
+
+Remote Procedure Call (RPC)
+Remote Method Invoction (RMI)
+Inter-process Communication (IPC)
+
+
+Escrow account
+// holds fund until crypto transaction completes
+
+EVM
+// Ethereum Virtual Machine
