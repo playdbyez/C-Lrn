@@ -1,7 +1,7 @@
 FUNCITON CALL: Sha256
 
 
-
+#include <openssl/sha.h>
 void sha256(struct sha256 *sha, const void *p, size_t size)
 {
     struct sha256_ctx ctx;
