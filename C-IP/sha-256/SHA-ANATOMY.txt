@@ -15,9 +15,15 @@ void sha256(struct sha256 *sha, const void *p, size_t size)
 Let's disect this function call:
 
 void sha256(struct sha256 *sha, const void *p, size_t size)
+First we realize that the return value is void which means the function does not return the sha256 of the data. 
+However we see that the first argument struct sha256 *sha is a pointer to a sha256 struct with the name sha. 
+This suggests that the pointer that we pass to the function will afterwards contain the computed hash.
 
-First we realize that the return value is void which means the function does not return the sha256 of the data. However we see that the first argument struct sha256 *sha is a pointer to a sha256 struct with the name sha. This suggests that the pointer that we pass to the function will afterwards contain the computed hash.
+The second argument const void *p is a constant void pointer. 
+This means that the function does not care about the data type of the data for which it computes the hash and it will not be able to modify the memory to which the pointer points to. 
+This makes sense when we want to compute the hash of some data we don't want this data to be changed. 
+Also computing the hash is a binary operation which is possible on the binary representation of any datatype.
 
-The second argument const void *p is a constant void pointer. This means that the function does not care about the data type of the data for which it computes the hash and it will not be able to modify the memory to which the pointer points to. This makes sense when we want to compute the hash of some data we don't want this data to be changed. Also computing the hash is a binary operation which is possible on the binary representation of any datatype.
-
-This brings us to the third argument size_t size which is supposed to be the size of the data the second argument points to. I assume there is somewhere a typedef statement defining size_t as an integer. As the second argument is just a pointer to the data struct for which to compute the hash the function needs to know how much memory to process.
+This brings us to the third argument size_t size which is supposed to be the size of the data the second argument points to. 
+I assume there is somewhere a typedef statement defining size_t as an integer. 
+As the second argument is just a pointer to the data struct for which to compute the hash the function needs to know how much memory to process.
