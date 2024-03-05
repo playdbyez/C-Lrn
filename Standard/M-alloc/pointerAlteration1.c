@@ -23,7 +23,7 @@ int q[15];
     *ptr = 9;
     printf("\n%d", q[10]);
     
-     
-    
+      //printf("\n%d", q[11]);
+      // uncommenting the ptr++ plus this line will Output: 9  
 }
 // Output: 9
