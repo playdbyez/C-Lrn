@@ -12,12 +12,15 @@ int *ptr;
 
 int q[15];
     q[10]= 7;
+
+    // &ptr = &q[10]
+    // assignment is invalid
     
     ptr =  &q[10];
     *ptr = 9;
     printf("\n%d", q[10]);
     
-    
      
     
 }
+// Output: 9
