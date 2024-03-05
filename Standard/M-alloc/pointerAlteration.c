@@ -13,6 +13,9 @@ int *ptr;
 int q[15];
     q[10]= 7;
 
+     //ptr++;
+    // uncommenting the line above results in the Output : 7
+    
     // &ptr = &q[10]
     // assignment is invalid
     
