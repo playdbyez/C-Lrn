@@ -1,0 +1,52 @@
+
+##############:: INT MAIN :: ###############
+
+>>>>Variations<<<<<
+
+int main (){
+}
+
+int main (int argc, char **argv){
+}
+
+int main (int argc, char *argv[]){ 
+}
+
+INT ARGC  = the ammount of arguments when the program is executed
+CHAR ARGV = a 2-dimensional array of arguments per character used in when the program is executed
+
+I.E.
+$ a.out
+  argc    =  1
+  argv[0] = "a.out"
+
+
+$ a.out input1
+  argc       =  2
+  argv[1][0] = 'i'
+  argv[1][1] = 'n'
+  argv[1][2] = 'p'
+  argv[1][3] = 'u'
+  argv[1][4] = 't'
+  argv[1][5] = '1'
+
+
+
+##############:: External Functions :: ###############
+
+    MAIN POINTS
+<> Always check if there are explicit return statements, otherwise pointers will be necesary for persistancy
+<> Always know what the function is supposed to return on success and on error
+<> Always check that required arguments are fulfilled in their due type
+<> Always check if a required argument for the function is also a function
+<> All functions are assignable when calling it, regardless if assigning it is a requirement for the correct output
+<> All arguments to functions are copies of the original variable including the addresses
+
+
+
+
+void funct(void arg1) {
+}
+This function has no specified return type since it is VOID
+This function has no return statement
+This function's argument also does not require any specific type 
