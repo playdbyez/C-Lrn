@@ -1,0 +1,53 @@
+######################:: Stack Memory ::#####################
+
+Memory to a compiler is sorted in address value pairs
+
+Volatile Storage == Temp_mem
+> RAM
+> Cache
+> Registers
+
+Non-volatile Storage == Perm_mem
+> Read Only Memory ( ROM/firmware )
+> Flash memory (SSD)
+> HardDisk
+
+
+:: The STACK ::
+
+
+    <<PUSH>>                           <<POP>>                      
+
+    [[ 4f ]]            top           [[ 4f ]]
+      |  |                              Λ  Λ 
+      V  V                              |  |
+     [ 41 ]                            [ 41 ] 
+     [ 58 ]                            [ 58 ] 
+     [ 4a ]                            [ 4a ] 
+     [ 2e ]                            [ 2e ] 
+     [ 55 ]                            [ 55 ] 
+     [ 6b ]            bottom          [ 6b ] 
+ 
+<> Stack memory is less flexible
+<> Follows a 'last in, first out' arrengement
+<> Each stack frame can only interact with the frame bellow it before being popped
+<> The whole syntax is interpreted first before the stack for the program is ordered 
+<> Once assigned the size of the stack s fixed and thus hard to alter while the program is running
+
+
+>> During compilation <<
+
+It essentially pushes all functions enclosed in braces from bottom to top.
+
+The compiler first reads the main function from top to bottom, assigns its values and 
+extablishes the order of calling any external functions and pushes main into the stack.
+
+The compiler then reads the last function to be executed from top to bottom then also 
+pushes it into the stack above main.
+
+The above process is done recursively until the first function to be called by main sits on top of the stack.
+
+
+
+
+
