@@ -1,0 +1,35 @@
+  ############################### :: STRINGS :: ################################
+
+[ All operations bellow only operate on strings with a null terminator ]
+
+>>>String Comparison
+
+
+
+
+>>>Find Substring
+
+
+
+>>>Find Character
+
+
+
+
+>>>String to LongInt
+
+
+
+
+>>>Copy String
+
+
+
+
+>>>Concatenate String
+
+
+
+>>>Allocate String
+
+strdup
