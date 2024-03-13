@@ -1,0 +1,11 @@
+########## Segmentation Fault (Core dumped) ###########
+This warning indicates that the program is attemptin to read or write to a memory address 
+that does not belong to the program, resulting in the overflow being redirected to the file named core
+
+
+% find . - iname "core"
+// the core file is a way to debug programs but its also heavy on disk
+
+
+$ limit coredumpsize 0
+// {revent the generation of the core file but does not prevent segmentation faults
