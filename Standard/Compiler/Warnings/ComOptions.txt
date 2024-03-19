@@ -21,8 +21,10 @@ $ cat prog.c.gcov
 //displays lines not executed by marking the lines with #####
 
 
+################ Performance Profiling ############
+  profiling with gprof
 
-  
+$gcc
 
 ################# GDB debugger / DDD (Data Display debugger) ############## 
 
