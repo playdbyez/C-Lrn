@@ -1,0 +1,43 @@
+##############:: INT MAIN :: ###############
+
+>>>>Variations<<<<<
+
+1. int main (){ }
+2. int main (int argc, char **argv){ }
+3. int main (int argc, char *argv[]){ }
+
+INT ARGC  = the ammount of arguments when the program is executed
+CHAR ARGV = a 2-dimensional array of arguments per character used in when the program is executed
+
+I.E.
+$ a.out
+  argc    =  1
+  argv[0] = "a.out"
+
+
+$ a.out input1
+  argc       =  2
+  argv[1][0] = 'i'
+  argv[1][1] = 'n'
+  argv[1][2] = 'p'
+  argv[1][3] = 'u'
+  argv[1][4] = 't'
+  argv[1][5] = '1'
+
+
+   ########### Multiple File Compilation ######## 
+  
+$ gcc -c progX.c 
+//creates an object file (progX.o) instead of an executable (a.out)
+// object files are meant to be compiled in conjunction with other files
+// usually viable when there are very many object files to be compiled together
+// usually scripted for usage with the "make" command
+  
+  
+$ gcc progX.o func.o
+//linking both object files to create an executable (a.out)
+
+$ gcc progX.c progY.c
+// alternatively compiles and links both files into one executable (a.out)
+
+
