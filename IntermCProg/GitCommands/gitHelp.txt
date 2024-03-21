@@ -1,0 +1,32 @@
+
+### Creating an SSH key for github.com ###
+
+$ ssh-keygen -t rsa -b 2
+>tempo-rsa
+>passworD1
+// Creates  a password protected key under file-name tempo_rsa
+
+$ cat ~/.ssh/tempo_rsa.pub
+// Outputs key
+
+Navigate to www.github.com
+Settings -> SSH and GPG keys -> paste your key
+
+
+
+                      ### Using git ###
+
+$ more .git/config
+// The dir .git stores files reponsible for communicating with github.com
+
+$ git status
+// Dispays status on repositories, if they were uploaded or not
+
+& git log
+// Display a historic of commits
+
+
+GIT ALTERNATIVES
+> CVS ( concurrent version system )
+> SVN ( subversion )
+
