@@ -1,21 +1,4 @@
   
-  
- ########### Multiple File Compilation ######## 
-  
-$ gcc -c progX.c 
-//creates an object file (progX.o) instead of an executable (a.out)
-// object files are meant to be compiled in conjunction with other files
-// usually viable when there are very many object files to be compiled together
-// usually scripted for usage with the "make" command
-  
-  
-$ gcc progX.o func.o
-//linking both object files to create an executable (a.out)
-
-$ gcc progX.c progY.c
-// alternatively compiles and links both files into one executable (a.out)
-
-
 
 
 
