@@ -47,9 +47,43 @@ $ cat prog.c.gcov
 ################ Performance Profiling ############
   profiling with gprof
 
-$gcc
+$gcc -pg fib1.c fib2.c fibmain.c -o prog
+// The file gmon.out will then store the profiling information for running the executable prog 
+
+$ grpof prog
+// Outputs the contents of gmon.out tied to prog
+// Output :
+
+index  %  time        self        children            called              name
+                                                                            <spontaneous>
+[1]       100.0       0.00        3.96                                    main[1]
+                      3.93        0.00          2000000/2000000              fib1[2]
+                      0.03        0.00          2000000/2000000              fib2[3]
+------------------------------------------------------------------------------------------
+                                                3538000000                    fib1[2]
+                      3.93        0.00          2000000/2000000           main[1]
+[2]       99.2        3.93        0.00          2000000+3538000000        fib1[2]
+                                                3538000000                    fib1[2]
+------------------------------------------------------------------------------------------
+                      0.03        0.00          2000000/2000000              main[1]
+[3]       0.08        0.03        0.00          2000000                   fib2[3]
+------------------------------------------------------------------------------------------
+
+// This output indicates that:
+  99.2% of the time is spent on recursive function fib1
+  0.8% of the time is spent on fib2
+  main calls function fib1 2000000 times
+  fib1 calls itself 3538000000 times which is excesive and needs improvement
+  main calls function fib2 2000000 times 
+  fib2 does not call itself 
 
 
+
+################ Memory Leak Detection ################
+  leakDetector valgrind
+
+$ valgrind --tool=memcheck --leak-check=full --verbose --log-file=valog ./a.out | grep "ERROR" valog
+//Executing valgrind on the executable file a.out
 
 
 ################# GDB debugger / DDD (Data Display debugger) ############## 
