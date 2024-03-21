@@ -2,14 +2,9 @@
 
 >>>>Variations<<<<<
 
-int main (){
-}
-
-int main (int argc, char **argv){
-}
-
-int main (int argc, char *argv[]){ 
-}
+1. int main (){ }
+2. int main (int argc, char **argv){ }
+3. int main (int argc, char *argv[]){ }
 
 INT ARGC  = the ammount of arguments when the program is executed
 CHAR ARGV = a 2-dimensional array of arguments per character used in when the program is executed
@@ -31,9 +26,9 @@ $ a.out input1
 
 
 
-##############:: External Functions :: ###############
+!!! ################# :: External Functions :: ############### !!!
 
-    MAIN POINTS
+                      []     MAIN POINTS    []
 <> Always check if there are explicit return statements, otherwise pointers will be necesary for persistancy
 <> Always know what the function is supposed to return on success and on error
 <> Always check that required arguments are fulfilled in their due type
@@ -44,6 +39,7 @@ $ a.out input1
 
 
 
+###################################################################################################################
 void funct(void arg1) {
 }
 >This function has no specified return type since it is VOID
@@ -51,7 +47,7 @@ void funct(void arg1) {
 >This function's argument also does not require any specific type 
 
 
-
+###################################################################################################################
 void funct(void *arg1) {
 }
 >This function's type is VOID
@@ -63,6 +59,7 @@ a pointer in order to maintain the changes done by the function
 
 
 
+###################################################################################################################
 int funct(int *arg1, int *arg2) {
 }
 >If this function has no return type, it is necessary to use its arguments as 
@@ -70,7 +67,7 @@ pointers in order to maintain the changes done by the function
 >Only 2 arguments of type int are acceptable and must passed as addresses (&a, &b) or deref pointers
 
 
-
+##########################################################################################################
 int *funct(int size) {
   int *mal;
   mal = (int *) malloc (sizeof (int)* size);
@@ -80,7 +77,7 @@ int *funct(int size) {
 >The return type of this function is the address of a pointer
 >The callee being assigned the output of this function must be the address of local pointer
 
-
+###########################################################################################################
 qsort(int (* comp) (const void*, const void*)){
 
 }
@@ -96,3 +93,18 @@ const int *ptr2 = (const int*)b;
   int val1 = *ptr1;
   int val2 = *ptr2;
 }
+
+>If the argument for qsort is requiring a string type cast instead of int then follow the bellow declaration:
+
+#include <string.h>
+
+int dir (const void *a, const void *b){
+const char * const *ptr1 = (const char**)a;
+const char * const *ptr2 = (const char**)b;
+  const char *str1 = *ptr1;
+  const char *str2 = *ptr2;
+          return strcmp(str1, str2);
+}
+
+
+###########################################################################################################
