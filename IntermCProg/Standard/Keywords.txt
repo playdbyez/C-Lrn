@@ -37,7 +37,7 @@ inline
 register
 restrict
 sizeof
-static
+static = [data type] = this data type is invisible outside its current file
 struct
 switch
 typedef
