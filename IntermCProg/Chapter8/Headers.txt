@@ -3,11 +3,25 @@
 <> The header space in a C-program is the space before the declaration of int (main){}
 <> This space can be used to include:
                 >> libraries
-                >> external functions 
+                >> header files
                 >> constant definitions
                 >> functions with a semicolon that are sourced from external .c files
+                >> global functions 
 
+#######################################################################################
 #include <stdio.h>
+
 #include "header.h"
+
 #define MATH_PI 3.14159265
+
 int extern(int a);
+
+int global(int a, int b){
+                            //some code
+                            //return a+b;
+                                            }
+
+
+###########################################################################################
+
