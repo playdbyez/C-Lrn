@@ -1,0 +1,31 @@
+#include <stdlib.h>
+
+int main(int argc, char * argv[])
+{
+  FILE *iptr;
+  iptr = fopen(arg[1]);
+int count = 0;
+int val;
+
+while (fscanf(iptr,"%d", &val) == 1){count++;}
+fseek(iptr, 0, SEEK_SET);
+
+int val1;
+while(fscanf (iptr,"\n", &val1) == 1)
+{printf("", &val1, ftell(iptr));}
+
+fseek(iptr, 0, SEEK_END);
+size_t told = ftell(iptr);
+fclose(iptr);
+}
+
+//fscanf() works best with int
+//creates instance of FILE
+//opens file from argv for reading
+//scans the file for integers and store each inside val upon success
+//calling fscanf() with the option %d makes it skip spaces and newline characters
+//counts how many fscanf() calls were used
+//returns to the beginning of the file 
+//prints the index position of every newline char
+//goes to th end of the file and report its index
+//its index is returned in bytes, thus providing the original file's size
