@@ -1,0 +1,16 @@
+#include <stdlib.h>
+
+int main(int argc, char * argv[])
+{
+  FILE *iptr;
+  iptr = fopen(arg[1], "r");
+  int newlin;
+while (!feof(iptr)){
+  newlin= fgetc(iptr);
+  if (newli == '\n'){printf("%p", newlin);}
+}
+
+//opens files specified by argv for reading
+//fgetc() iterates through every char and returns int
+// prints the address of every "\n" character
+//function feof() makes sure to end the search loop once EOF is reached
