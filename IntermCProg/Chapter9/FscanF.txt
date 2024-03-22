@@ -22,6 +22,7 @@ fclose(iptr);
 //fscanf() works best with int
 //creates instance of FILE
 //opens file from argv for reading
+//the options provided are "r", "w", "a" for reading writing and appending respectively
 //scans the file for integers and store each inside val upon success
 //calling fscanf() with the option %d makes it skip spaces and newline characters
 //counts how many fscanf() calls were used
