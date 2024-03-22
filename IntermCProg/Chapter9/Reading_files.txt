@@ -1,0 +1,28 @@
+######################:: Reading and Writing to files ::#####################
+
+[] A file is a stream and so it moves forward until it reaches the EOF
+[] Requires stdlib.h and creating an instance of the type (FILE *obj)
+[] fopen opens a file and specifies if its for readn from it, writing to 
+   it or appending its text. either way its output must be dumped into an object
+   of the type FILE
+[] fscanf() searches through the FILE object and can record whole digits as a single int
+  this function usually stops at "newline" and "space" characters
+[] fgets() searches through the FILE object by a number of specified characters per call
+[] getline() searches through the FILE object lineby line and must be freed with free()
+[] fgetc() iterates through every character and returns the character value in ascii
+  in order to identify the EOF with this function your iterator must be of type int and not char
+[] feof() can identify the EOF character (-1)  from the FILE *object
+[] fseek() is used to return to the beginning or end of a file stream
+[] ftell() wil return the current position of your reading method in bytes from the beginning of the file 
+[] fprintf() writes output to a file  by casting it on the FILE instance
+[] fclose() is used on the instance in order to terminate the operation done on the file
+   both fclose() and fopen() are sensitive functions so be sure to have conditions in case
+   either of these calls returns NULL
+
+[] Common operations include:
+                >> searching by word-length (fscan(%s))
+                >> searching line by line (getline() and free())
+                >> searching by specified chunks of characters (fgets())
+                >> functions with a semicolon that are sourced from external .c files
+
+
