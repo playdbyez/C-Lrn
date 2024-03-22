@@ -1,2 +1,2 @@
-Ideas and solutions for the Book  
+Ideas and solutions for the book  
 >>Intermediate C Programming
