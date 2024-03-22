@@ -1,0 +1,9 @@
+######################:: Heap Memory ::#####################
+
+Memory to a compiler is sorted in address-value pairs.
+
+<> Heap memory is more flexible
+<> Refers to an address location where there is an abundance of free memory far 
+   enough from the address location of the program's original stack 
+<> Heap memory must be freed
+<> Heap boundaries can be adjusted while the program is running
