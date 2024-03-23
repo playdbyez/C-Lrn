@@ -1,4 +1,49 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#define LINE_LENGTH 81
 
+int main (int charc, char **argv )
+{  
+    FILE *infptr;
+infptr= fopen(argv[1], "r");
+    FILE *outptr;
+outptr = fopen(argv[2], "w");
+            if (outptr == NULL) {fclose(infptr); return -1;}
+int count = 0;
+char oneline[LINE_LENGTH];
+  while()
+  {
+    if (strstr(oneline, LINE_LENGTH, infptr) != NULL)
+       {fprintf(outptr, "%s", oneline);}
+
+  char *chptr;
+            while ( fgets(oneline, argv[3]) != NULL)
+                  {
+                    if ( strstr (oneline, LINE_LENGTH, infptr) != NULL)
+                        {fprintf (outptr, "%s", oneline);}
+                        chptr = strstr(chptr, argv[3]);
+                          if (chptr != NULL){
+                                              count++;
+                                              chptr++; // if "eyeye" counts as two "eye"
+                                                       // if "eyeye" counts as online one "eye" use:
+                                                       // chptr += strlen(argv[3]);
+                                                }
+                  }
+  }
+fprintf(outptr, "%d\n", count);
+flcose(infptr);
+flcose(outptr)
+
+return 0;
+}
+
+//This program takes 3 arguments to execute successfully
+    > argv[1] name of input file
+    > argv[2] name of output file
+    > argv[3] word to be searched for
+// This implementation  counts the number of occurrences of a word from a file
+// By analysing chunks of 80 characters per call and retrieving matches via strstr()
+// strstr() is set up to only skip one character upon success thus allowing for more matches to be found within the stream
+// it stores the lines and total count to the output file
