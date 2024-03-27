@@ -82,3 +82,17 @@ const char * const *ptr2 = (const char**)b;
 
 
 ###########################################################################################################
+
+return_type func(arguments)
+{
+  if (terminating condition)                  // by checking these arguments
+    {solve problem}
+  else                                        // recursive case
+      {return func (simplified arguments);}   // the function then calls itself
+}
+
+> Recursive functions are characterized by calling themselves at the end of the function until a easier base-case solution is reached
+> Recursive functions are slower than iterative implementations
+> Reursive functions push and pop themselves into the stack until the base-case is reached
+
+
