@@ -64,10 +64,19 @@ strcpy(dest, str);
 // searches for null terminator in str1 and copies from there onwards
 char * str1 = "Hi";
 char * str2 = "Li";
- (OUTPUT: dest = "HiLo" )
+strcat(str1, str2);
+ (OUTPUT: str1 = "HiLo" )
+
+
+
 
 
 >>>Duplicate String
 //allocates enough memory to hold the old string plus a nullpointer, the string must be freed
 char src[] = "Splinters";
 char * dest = strdup (src);
+free (dest);
+
+
+
+
