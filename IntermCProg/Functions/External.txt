@@ -7,9 +7,9 @@
 <> Always know what the function is supposed to return on success and on error
 <> Always check that required arguments are fulfilled in their due type
 <> Always check if a required argument for the function is also a function
-<> All functions are assignable when calling it, regardless if assigning it is a requirement for the correct output
+<> All functions are assignable to a local variable when calling it, regardless if assigning it is a requirement for the correct output or not
 <> All arguments to functions are copies of the original variable including the addresses
-
+<> Functions that require a pointer as an argument intend to have their operations done on the original version of the variable passed
 
 
 
