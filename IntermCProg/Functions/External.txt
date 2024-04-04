@@ -15,14 +15,17 @@
 
 ###################################################################################################################
 void funct(void arg1) {
+ free (arg1);
 }
 >This function has no specified return type since it is VOID
 >This function has no return statement
->This function's argument also does not require any specific type 
+>This function's argument also does not require any specific type
+>This function performs a single free operation
 
 
 ###################################################################################################################
 void funct(void *arg1) {
+
 }
 >This function's type is VOID
 >This function's required argument is a pointer of type VOID 
