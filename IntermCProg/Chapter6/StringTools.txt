@@ -38,11 +38,11 @@ localize = strchr(str, 'N');
 
 
 >>>String to LongInt
-// checks for the entire string for numbers
+// checks for the entire string for numbers and outputs it as long int
 // can convert binary (base2), hex (base16) or decimal (base10)
 // returns 0 if there are no numeric digits within str
 char *str = "hi123there";
-int val = strtol(str, NULL, 10);
+int val = (int) strtol(str, NULL, 10);
  (OUTPUT: val = 123 )
 
 
