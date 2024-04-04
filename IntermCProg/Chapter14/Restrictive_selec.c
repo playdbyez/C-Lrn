@@ -1,5 +1,5 @@
-// n ammount of balls are to be randomly selected from a pull of 2 coloured balls REd and Blue.
-// 2 Read balls cannot be selected
+// n ammount of balls are to be randomly selected from a pull of 2 coloured balls RED and BLUE.
+// 2 RED balls cannot be selected
 //The relationship is :
 //                          f(n) = f(n-1) + f(n-2)
 
