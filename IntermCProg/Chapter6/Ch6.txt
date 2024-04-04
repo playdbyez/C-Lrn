@@ -1,35 +1,73 @@
   ############################### :: STRINGS :: ################################
 
-[ All operations bellow only operate on strings with a null terminator ]
+[ All operations bellow only operate on strings with a null terminator and double quotes ]
 
 >>>String Comparison
+// checks if both are exactly the same value
+//    returns 0 if both are equal 
+//    returns positive if  str1 > str2
+//    returns negative if  str1 > str2
+// the total value of each string is defined as the sum of all characters as their ASCII value
+int fd = strcmp (str1, str2);
 
 
 
 
 >>>Find Substring
+// searches for a sequence of letters wihin a bigger string of letters
+// upon successs it returns the address of the first character of an exact match within the source string
+// upon no exact matches found, returns null
+char * str = "Hello world";
+char * local;
+local = strstr (str, "world")
+ (OUTPUT: local = &str[6] )
+
 
 
 
 >>>Find Character
+// searches for single character within str
+// returns address of the first match onsuccess 
+// returns null on match not found
+char * localize;
+char * str = "NAME";
+localize = strchr(str, 'N');
+ (OUTPUT: localize = &str[0] )
 
 
 
 
 >>>String to LongInt
+// checks for the entire string for numbers
+// can convert binary (base2), hex (base16) or decimal (base10)
+// returns 0 if there are no numeric digits within str
+char *str = "hi123there";
+int val = strtol(str, NULL, 10);
+ (OUTPUT: val = 123 )
+
 
 
 
 
 >>>Copy String
-
+// copies str into dest only if str has null terminator
+// does not check if dest has enough storage
+char str[] = {'H', 'i', '\0'};
+char dest[3];
+strcpy(dest, str);
+ (OUTPUT: dest = "Hi" )
 
 
 
 >>>Concatenate String
+// appends str2 to the end of str1
+// searches for null terminator in str1 and copies from there onwards
+char * str1 = "Hi";
+char * str2 = "Li";
+ (OUTPUT: dest = "HiLo" )
 
 
-
->>>Allocate String
-
-strdup
+>>>Duplicate String
+//allocates enough memory to hold the old string plus a nullpointer, the string must be freed
+char src[] = "Splinters";
+char * dest = strdup (src);
