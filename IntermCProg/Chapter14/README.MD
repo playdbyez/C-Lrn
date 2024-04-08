@@ -1,7 +1,8 @@
 ######################### :: RECURSION :: #########################
 
-return_type func(arguments)
-{
+
+return_type func(arguments)  
+{  
   if (terminating condition)                  // by checking these arguments
     {solve problem}
   else                                        // recursive case
