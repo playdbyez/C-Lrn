@@ -3,10 +3,10 @@
 
 return_type func(arguments)  
 {  
-  if (terminating condition)                  // by checking these arguments  
+  if (terminating condition)                    // by checking these arguments  
     {solve problem}  
-  else                                        // recursive case  
-      {return func (simplified arguments);}   // the function then calls itself  
+  else                                          // recursive case  
+      {return func (simplified arguments);}     // the function then calls itself  
 }  
 
 <> Recursion refers to  a very long loop fulfiled through a recursive function.
