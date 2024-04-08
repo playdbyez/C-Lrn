@@ -1,0 +1,65 @@
+################ :: STRUCTURES :: ##################
+[] To be defined in a different file to the main() function
+[] to be declared within the header portion of the main() function (#include "name.h")
+[] Structures support the assignment operator inbetween instances of the same type(=)
+[] Structures do not support equalizationj operations inbetween instances as a whole but it does inbetween attributes ( != / == )
+[] Composed of 3 main parts
+  - Structure definition
+  - Object declaration
+  - Attributes
+
+> A structure defines its own type (car)
+> Inside a structure is where the attributes of its type aer kept with predefined values (Liscence_plate)
+> Upon calling a structure within a function, you create an instance/object of said structure to be used by the function (car myCar1)
+
+
+
+
+############ :: STRUCTURES & POINTERS :: ##################
+
+[] Often used together in order to charge a structure's attributes from outside its instance declaration
+[] Pointers can also be used inside the structure's definition file, for example a string (char *str), when the input size is unknow
+[] Unmeasured strings can be supported by allocating functions like strdup() from inside main itself or from external functions
+[] Caution is necessary when using an assignment to copy a malloced value to another since whats be copied is not only the object itself but the address of the initially malloced object
+[] The arrow symbol ( -> ) has 2 roles when used with a structure object, its function varies according to its position in relation to the assignmen operator
+[] The arrow is to be used alongside a pointer in order to assign a value to an attribute or accessing an attribute itself
+
+
+:: DEFINITION ::
+// creating a car structure with three defined attributes
+
+
+#ifndef CAR_H
+#define CAR_H
+
+typedef struct
+{
+  char *Liscence_plate;
+  int year;
+  char *model;
+} car;
+#endif
+
+
+    :: CALLING AND ASSIGNMENT ::
+
+#include <stdio.h>
+#includ  "car.h"
+
+int main()
+{
+  car myCar1;                     // Declaring an instance of type car
+  myCar1.year = 2005;             // Assigning values to the instance myCar1 of type car
+  myCar1.model = "Chevrolet"
+
+// first use of the arrow (Assigning)
+int *p;
+p -> year = 2008;                // equivalent to  (*p).year = 2008;
+
+// second use of the arrow (Accessing)
+printf("my car was manufactured in %d", p -> year);
+
+return 0;
+}
+
+
