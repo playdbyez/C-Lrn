@@ -5,7 +5,7 @@ return_type func(arguments)
 {  
   if (terminating condition)                    // by checking these arguments  
     {solve problem}  
-  else                                          // recursive case  
+  else                                              // recursive case  
       {return func (simplified arguments);}     // the function then calls itself  
 }  
 
