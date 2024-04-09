@@ -1,0 +1,7 @@
+[] Generally useful for encryption algorithms or video compression algorithms
+[] It emplies working on binnary numbers and individual bits
+[] usefull if the system have memory limitations like embedded devices
+[] used often for managing permissions (rwxrwxrwx) == (777) == ( 0111 0111 0111 ) 
+
+BitMasking
+https://www.youtube.com/watch?v=ffPOA7UUDAs
