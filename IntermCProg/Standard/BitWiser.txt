@@ -1,7 +1,14 @@
 [] Generally useful for encryption algorithms or video compression algorithms
 [] It emplies working on binnary numbers and individual bits
 [] usefull if the system have memory limitations like embedded devices
-[] used often for managing permissions (rwxrwxrwx) == (777) == ( 0111 0111 0111 ) 
+[] used often for managing permissions (rwxrwxrwx) == (777) == ( 0111 0111 0111 )
+[] typical operations include:
+    > Check Bits ( find out if its 1 or 0 )
+    > Set Bits ( set individual bit to 1 )
+    > Clear Bits ( set individual bit to 0 )
+    > Toggle Bits ( set bits to the opposite of its currently value )
 
 BitMasking
+Is the trick to access only a particular bit within a process and ignore the rest
+
 https://www.youtube.com/watch?v=ffPOA7UUDAs
