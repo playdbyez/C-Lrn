@@ -12,4 +12,16 @@ BitMasking
 Is the trick to access only a particular bit within a process and ignore the rest.
 This is done by masking the ignored bit positions with 0 and only assigning 1 to the position we want to work with
 
+https://www.youtube.com/watch?v=FmY-PjukO8I
 https://www.youtube.com/watch?v=ffPOA7UUDAs
+//bitmasking
+
+https://www.youtube.com/watch?v=OBP_nKp_eCw 
+//bitwise in embedded
+
+https://www.youtube.com/watch?v=UPVoGMZWQMU
+Noob to expert
+
+https://www.youtube.com/watch?v=cLcQyOy73c0
+https://www.youtube.com/watch?v=6hnLMnid1M0
+// bitwise flag system
