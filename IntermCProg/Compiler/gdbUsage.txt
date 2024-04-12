@@ -1,6 +1,54 @@
-// Define a c program called progY.c
+################# GDB debugger / DDD (Data Display debugger) ############## 
+################################## Usage I ################################
+$ sudo apt-get install ddd
+// optional GUI interface for gdb debugger
 
-$ gcc ./progY.c
+$ gcc -g prog.c
+// enable gdb debuggin upon source file prog.c
+
+$ gdb
+// run gdb
+
+(gdb) b g1
+(gdb) b g2
+// set break at function g1 and function g2
+
+(gdb) run
+// run program
+
+(gdb) bt
+// view callstack by invoking "BackTrace" once the program is stoped by a break interrupt
+
+(gdb) f1
+// display frame 1 of current function upon break interrupt
+
+(gdb) continue
+// resume  execution after break interrupt
+
+(ddd) graph display <variable name>
+// displays variable within current scope when using the DDD GUI
+
+
+
+################################## Usage II ################################
+// Define a c program called progY.c
+#include <stdio.h>
+int main (int argc, char** argv)
+{
+int a = 1;
+int b = 2;
+int c = 3;
+int d = 4;
+int e = 5;
+int f = 6;
+int g = 7;
+  printf ("%d %d %d %d %d %d %d\n", a, b, c, d, e, f, g);
+return 0;
+}
+
+
+
+$ gcc progY.c
 //compile progY.c
 
 $ gdb a.out
@@ -10,7 +58,7 @@ $ gdb a.out
 // Displays the assambler version of the program
 //OutPut:
 Dump of assembler code for function main:
-0x0000000000001149      <+0>:	endbr64	
+0x0000000000001149  <+0>:	endbr64	
 0x000000000000114d	<+4>:	push	rbp	
 0x000000000000114e	<+5>:	mov	rbp,rsp	
 0x0000000000001151	<+8>:	sub	rsp,0x30	
@@ -90,8 +138,13 @@ gs	        0x0	            0
 
 (gdb) x/4gx $rsp
 // Display stack variables
+// showing that rsp points to the value of 6 and rsp+8 is 7
+//OutPut:
+0x7fffffffe380: 0x000000000006  0x000000000007
+0x7fffffffe390: 0x7fffffffe4d8  0x7ff1178bfbff
 
 
 (gdb) c
 // continue with execution
+
 https://www.youtube.com/watch?v=vc_9Ujkpy7I
