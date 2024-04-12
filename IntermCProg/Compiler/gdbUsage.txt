@@ -29,7 +29,7 @@ $ gdb
 // displays variable within current scope when using the DDD GUI
 
 
-
+############################# GDB debugger ###########################
 ################################## Usage II ################################
 // Define a c program called progY.c
 #include <stdio.h>
