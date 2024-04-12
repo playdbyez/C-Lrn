@@ -69,37 +69,6 @@ $ valgrind --tool=memcheck --leak-check=full --verbose --log-file=valog ./a.out 
 //Executing valgrind on the executable file a.out
 
 
-################# GDB debugger / DDD (Data Display debugger) ############## 
-
-$ sudo apt-get install ddd
-// optional GUI interface for gdb debugger
-
-$ gcc -g prog.c
-// enable gdb debuggin upon source file prog.c
-
-$ gdb
-// run gdb
-
-(gdb) b g1
-(gdb) b g2
-// set break at function g1 and function g2
-
-(gdb) run
-// run program
-
-(gdb) bt
-// view callstack by invoking "BackTrace" once the program is stoped by a break interrupt
-
-(gdb) f1
-// display frame 1 of current function upon break interrupt
-
-(gdb) continue
-// resume  execution after break interrupt
-
-(ddd) graph display <variable name>
-// displays variable within current scope when using the DDD GUI
-
-
 
 
 
