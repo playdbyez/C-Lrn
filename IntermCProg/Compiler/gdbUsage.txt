@@ -10,44 +10,41 @@ $ gdb a.out
 
 (gdb) dissas main
 // Displays the assambler version of the program
-
-
-
+//OutPut:
 Dump of assembler code for function main:
 0x0000000000001149      <+0>:	endbr64	
 0x000000000000114d	<+4>:	push	rbp	
 0x000000000000114e	<+5>:	mov	rbp,rsp	
 0x0000000000001151	<+8>:	sub	rsp,0x30	
-0x0000000000001155	<+12>:	mov	DWORD PT'	[	],	di
-0x0000000000001158	<+15>:	mov	QWORD PT	[	)p-Ox?	],	si
-Ox000000000000115c	<+19>:	mov	DWORD PT	[	],	xl
-0x0000000000001163	<+26>:	mov	DWORD PT	[	)p-0x1	],	x2
-Ox000000000000116a	<+33>:	mov	DWORD PT	[	],	x3
-0x0000000000001171	<+40>:	mov	DWORD PT	[	],	x4
-0x0000000000001178	<+47>:	mov	DWORD	PT.	[	)p-Oxc],	5
-Ox000000000000117f	<+54>:	mov	DWORD PT	[	)p-OxE],	6
-0x0000000000001186	<+61>:	mov	DWORD PTi	[	0x4],	
-Ox000000000000118d	<+68>:	mov	r8d,DWORD P	[ by	
-0x0000000000001191	<+72>:	mov	edi,DWORD P	[	bp-u:	]
-0x0000000000001194	<+75>:	mov	ecx,DWORD P	[ bp-O>	
-0x0000000000001197	<+78>:	mov	edx,DWORD P	[ bp-O›	
-Ox000000000000119a	<+81>:	mov	eax,DWORD P	[ bp-O>	
-Ox000000000000119d	<+84>:	mov	esi,DWORD P	[	bp-O\	
-Ox00000000000011a0	<+87>:	push	rsi	
-Ox00000000000011a1	<+88>:	mov	esi,DWORD P	[	bj	
-Ox00000000000011a4	<+91>:	push	rsi	
-Ox00000000000011a5	<+92>:	mov	r9d,r8d	
-)x00000000000011a8	<+95>:	mov	r8d,edi	
-)x00000000000011ab	<+98>:	mov	esi,eax	
-)x00000000000011ad	<+100>:	lea	rax,[rip+Ox	]	#
-lx00000000000011b4	<+107>:	mov	rdi,rax	
-)x00000000000011b7	<+110>:	mov	eax,0x0	
-)x00000000000011bc	<+115>:	call	Ox1050 <printf@plt>	
-)x00000000000011c1	<+120>:	add	rsp,Ox10	
-)x00000000000011c5	<+124>:	mov	eax,0x0	
-)x00000000000011ca	<+129>: 	leave		
-	<+130>:	ret		
-
+0x0000000000001155	<+12>:	mov	DWORD PTR	[rbp-0x24],edi
+0x0000000000001158	<+15>:	mov	QWORD PTR	[rbp-0x30],rsi
+Ox000000000000115c	<+19>:	mov	DWORD PTR	[rbp-0x1c],0x1
+0x0000000000001163	<+26>:	mov	DWORD PTR	[rbp-0x18],0x2
+Ox000000000000116a	<+33>:	mov	DWORD PTR	[rbp-0x14],0x3
+0x0000000000001171	<+40>:	mov	DWORD PTR	[rbp-0x10],0x4
+0x0000000000001178	<+47>:	mov	DWORD PTR	[rbp-0xc],0x5
+0x000000000000117f	<+54>:	mov	DWORD PTR	[rbp-0x8],0x6
+0x0000000000001186	<+61>:	mov	DWORD PTR	[rbp-0x4],0x7
+Ox000000000000118d	<+68>:	mov	r8d,DWORD PTR	[rbp-0xc]	
+0x0000000000001191	<+72>:	mov	edi,DWORD PTR	[rbp-0x10]
+0x0000000000001194	<+75>:	mov	ecx,DWORD PTR	[rbp-0x14]	
+0x0000000000001197	<+78>:	mov	edx,DWORD PTR	[rbp-0x18]	
+0x000000000000119a	<+81>:	mov	eax,DWORD PTR	[rbp-0x1c]	
+0x000000000000119d	<+84>:	mov	esi,DWORD PTR	[rbp-0x4]	
+0x00000000000011a0	<+87>:	push	rsi	
+0x00000000000011a1	<+88>:	mov	esi,DWORD PTR	[rbp-0x8]	
+0x00000000000011a4	<+91>:	push	rsi	
+0x00000000000011a5	<+92>:	mov	r9d,r8d	
+0x00000000000011a8	<+95>:	mov	r8d,edi	
+0x00000000000011ab	<+98>:	mov	esi,eax	
+0x00000000000011ad	<+100>:	lea	rax,[rip+Oxe50	]	# 0x2004
+0x00000000000011b4	<+107>:	mov	rdi,rax	
+0x00000000000011b7	<+110>:	mov	eax,0x0	
+0x00000000000011bc	<+115>:	call	Ox1050 <printf@plt>	
+0x00000000000011c1	<+120>:	add	rsp,Ox10	
+0x00000000000011c5	<+124>:	mov	eax,0x0	
+0x00000000000011ca	<+129>: leave		
+0x00000000000011cb	<+130>:	ret		
 End of assembler dump.
 
 
