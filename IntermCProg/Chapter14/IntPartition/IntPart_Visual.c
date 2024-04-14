@@ -16,7 +16,8 @@ void partition (int *arr, int ind, int left)
 if (left == 0){printPartition(arr, ind); return;}
 		for (val =1; val <= left; val++)
 		{ arr[ind] = val;
-		 //printf("[ ind = %d left = %d val = %d ]\n", ind+1, left-val, val); 	// analyzer line 
+					 //for (int j = 0; j < sizeof arr; j++)printf ("arr[%d] = %d ",j, arr[j]);	// whole array
+					 //printf("\n\n[ ind = %d left = %d val = %d ]\n", ind+1, left-val, val); 	// function values
 		  partition(arr, ind+1, left -val);	}
 
 }
