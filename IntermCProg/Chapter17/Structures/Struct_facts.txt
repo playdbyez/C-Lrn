@@ -1,5 +1,7 @@
 ################ :: STRUCTURES :: ##################
 [] To be defined in a different file to the main() function
+[] Can also defined within the same file as main()
+[] A name before the final semicolon after the structure is option for the header name
 [] to be declared within the header portion of the main() function (#include "name.h")
 [] Structures support the assignment operator inbetween instances of the same type(=)
 [] Structures do not support equalizationj operations inbetween instances as a whole but it does inbetween attributes ( != / == )
