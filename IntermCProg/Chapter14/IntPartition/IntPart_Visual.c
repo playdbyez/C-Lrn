@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void printPartition(int *arr, int legth)
+void printPartition(int *arr, int length)
 {
 	int ind;
 		for ( ind = 0; ind  < length -1; ind++ )
@@ -10,7 +10,7 @@ void printPartition(int *arr, int legth)
 		printf("%d\n", arr[length -1]);
 }
 
-void partition (int *arr, intd ind, int left)
+void partition (int *arr, int ind, int left)
 {
 	int val;
 if (left == 0){printPartition(arr, ind); return;}
