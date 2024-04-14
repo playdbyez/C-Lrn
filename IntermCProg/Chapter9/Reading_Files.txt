@@ -24,5 +24,13 @@
                 >> searching line by line (getline() and free())
                 >> searching by specified chunks of characters (fgets())
                 >> functions with a semicolon that are sourced from external .c files
+                >> writting output of fprintf to STDOUT (terminal screen) 
+
+
+######################:: Reading and Writing to BINARY FILE ::#####################
+
+[] fopen() is used in defferent ways depending on the OS it is called upon when operatin on binary files
+[] fwrite()
+[] fread()
 
 
