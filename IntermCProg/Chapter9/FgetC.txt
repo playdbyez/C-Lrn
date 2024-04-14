@@ -10,7 +10,11 @@ while (!feof(iptr)){
   if (newli == '\n'){printf("%p", newlin);}
 }
 
+
 //opens files specified by argv for reading
 //fgetc() iterates through every char and returns int
 // prints the address of every "\n" character
 //function feof() makes sure to end the search loop once EOF is reached
+
+
+int fgetc(FILE *stream)
