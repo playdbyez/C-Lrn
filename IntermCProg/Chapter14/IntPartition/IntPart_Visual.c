@@ -14,8 +14,9 @@ void partition (int *arr, intd ind, int left)
 {
 	int val;
 if (left == 0){printPartition(arr, ind); return;}
-		for (val =1; val <- left; val++)
+		for (val =1; val <= left; val++)
 		{ arr[ind] = val;
+		 //printf("[ ind = %d left = %d val = %d ]\n", ind+1, left-val, val); 	// analyzer line 
 		  partition(arr, ind+1, left -val);	}
 
 }
@@ -25,8 +26,9 @@ int main (int argc, char *argv[])
 	if (argc != 2) {return -1;}
 	int n = (int) strtol (argv[1], NULL, 10);
 	if (n <= 0) { return -1; }
+int *arr ; 
 arr = malloc (sizeof(int) * n);
-Partition(arr, 0, n);
+partition(arr, 0, n);
 free(arr);
 
 return 0;
