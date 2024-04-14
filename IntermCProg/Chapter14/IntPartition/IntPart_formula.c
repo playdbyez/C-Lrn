@@ -1,4 +1,5 @@
 //How many ways can the positive integer n be partitioned into smaller values ?
+// order of values does not matter
 
 #include <stdio.h>
 #include <stdlib.h>
