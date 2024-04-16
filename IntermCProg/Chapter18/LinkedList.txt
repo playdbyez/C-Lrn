@@ -1,6 +1,7 @@
             ################## :: LINKED LIST :: ####################
 
 > A dynamic data type that relies hevily on mallocing space for single characters / nodes
+> Nodes are sequenced in a non-contiguous way. (memory locations for each node is not in order)
 
 > A linked list's size is very flexible and they're very useful for frequent insert & delete operations.
 
