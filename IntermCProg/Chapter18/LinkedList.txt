@@ -11,7 +11,8 @@
   - Singly linked list (unidirectional, each node points to a single node)
 
 > Deleting a node however, requires linking the node that comes after,
-  to the node that comes before the node being removed in order to maintain its structure 
+  to the node that comes before the node being removed, in order to maintain its structure.
+  In a doubly linked list this usually takes 4 operations while an array may require more.
 
 > Compared to a contiguous memory region known as an array, linked lists take less operations to
   manage and delete characters / nodes and maintain its structure whereas arrays take more work
