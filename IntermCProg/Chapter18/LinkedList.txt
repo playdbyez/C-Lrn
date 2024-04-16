@@ -1,0 +1,23 @@
+            ################## :: LINKED LIST :: ####################
+
+> A dynamic data type that relies hevily on mallocing space for single characters / nodes
+
+> A linked list's size is very flexible
+
+> Useful for very large lists where any one node can be deleted at any position 
+
+> Linked lists can follow a variety of structures to determine its sequence, including:
+  - Doubly linked list (bidirectional, each node points to two other nodes)
+  - Singly linked list (unidirectional, each node points to a single node)
+
+> Deleting a node however, requires linking the node that comes after,
+  to the node that comes before the node being removed in order to maintain its structure 
+
+> Compared to a contiguous memory region known as an array, linked lists take less operations to
+  manage and delete characters / nodes and maintain its structure whereas arrays take more work
+
+> Doubly linked list structures are similar to binary tree structures, binary trees prefeer to focus 
+  more heavily in the sorting of its values based on the root value
+  whereas linked lists don't care much about sorting, aside of maintining a fixed "head" and "tail" of the list. 
+  
+  
