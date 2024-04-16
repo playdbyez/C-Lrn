@@ -2,7 +2,7 @@
 
 > A dynamic data type that relies hevily on mallocing space for single characters / nodes
 
-> A linked list's size is very flexible
+> A linked list's size is very flexible and they're very useful for frequent insert & delete operations.
 
 > Useful for very large lists where any one node can be deleted at any position 
 
