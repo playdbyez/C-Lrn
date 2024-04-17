@@ -1,6 +1,7 @@
  ############################### :: POSIX THREADS :: ################################
 
 https://www.youtube.com/watch?v=LOfGJcVnvAk
+https://www.youtube.com/watch?v=4rLW7zg21gI
 https://www.youtube.com/watch?v=uA8X5zNOGw8
 https://www.youtube.com/watch?v=ukM_zzrIeXs
 https://www.youtube.com/watch?v=oq29KUy29iQ
