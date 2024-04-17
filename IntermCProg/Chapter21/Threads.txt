@@ -1,0 +1,10 @@
+ ############################### :: POSIX THREADS :: ################################
+
+https://www.youtube.com/watch?v=LOfGJcVnvAk
+https://www.youtube.com/watch?v=uA8X5zNOGw8
+https://www.youtube.com/watch?v=ukM_zzrIeXs
+https://www.youtube.com/watch?v=oq29KUy29iQ
+https://www.youtube.com/watch?v=_n2hE2gyPxU
+https://www.youtube.com/watch?v=Pg_4Jz8ZIH4
+https://www.youtube.com/watch?v=q24-QTbKQS8
+https://www.youtube.com/watch?v=9axu8CUvOKY
