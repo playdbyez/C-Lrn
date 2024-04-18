@@ -1,5 +1,41 @@
  ############################### :: POSIX THREADS :: ################################
 
+<> This method of writing parallel programs relies on the POSIX standard of threads, supported by many operatings systems.  
+   Defined within the <pthread.h> library and with its own supporting data-type 'pthread_t' for storage, this POSIX 
+   implementation is referred to as pthread
+
+<> Threads is designed wih parallel programing in mind, for the benefit of making a program
+   execute faster via a multi-core processor.
+
+<> In regards to core utilization, programs can then be divided into two types:
+   
+   > Sequential Program = Single thread process designed for a single core system
+      > Operations : 
+                    - Single Instruction on Single Data (SISD) 
+                    - Operating System Multitasking
+
+
+   > Parallel  Program  = A two or more thread process designed for a multi-core system
+      > Operations : 
+                    - Single Instruction on Multiple Data (SIMD) 
+                    - Multiple Instructions on Single Data (MISD)
+                    - Multiple Instructions on Multiple Data (MIMD)
+
+<> Parallel programs can also run on single core processors via Multitasking which is
+   supported by the OS in simulating a multi-core environment.
+   This is achieved by giving each program a short time interval to make progress before being suspended in 
+   order to allow another time interval for anoter program to make progress.
+   To maximize performance, these intervals' length may vary depending on the function being executed
+   and these variations however to the detriment of tracking its execution, makes it hard to
+   predict exactly which program is running at any specific moment.
+
+<> When compiling a pthread program its necessary to link it to the pthread library in order 
+   to enable core management within gcc with the following argument:
+      $ gcc main.c -lpthread
+
+
+
+
 https://www.youtube.com/watch?v=LOfGJcVnvAk
 https://www.youtube.com/watch?v=4rLW7zg21gI
 https://www.youtube.com/watch?v=uA8X5zNOGw8
