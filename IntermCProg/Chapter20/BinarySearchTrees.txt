@@ -1,0 +1,23 @@
+ ############################### :: BINARY SEARCH TREES :: ################################
+
+<> Requires a sorted tree-like structure to operate on
+
+<> A tree like structure is composed by a root node, a left subtree and a right subtree.
+   Left subtrees usually hold values smaller than the root while the Right subtree holds values bigger than the root
+
+<> The root node is used as the entry point of the structure and thus any node can be accessed via the root node
+
+<> Tree nodes are either a branch node or leaf node:
+    - Branch node = has child nodes attached bellow 
+    - Leaf node   = has no child nodes bellow it
+
+<> It is also necessary to measure certain tree parameters in order to identify it:
+    - Distance between nodes =  from the current node count from 0 up to the target node  
+    - Height of tree =  from the bottom node count from 1 up to the root node  
+
+
+<> Binary Trees structures also vary in composition:
+    - Full binary trees =  each node has 2 or no child nodes
+    - Complete binary trees =  the node above a leaf node must have 
+                               a sibling node attached to its parent also
+
