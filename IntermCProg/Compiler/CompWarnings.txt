@@ -1,8 +1,8 @@
   
-
-
-
 ################ Program Diagnosis ############
+
+$ gcc prog.c -lpthread
+// Enable threads execution 
 
 $ gcc -Wall prog.c
 //enables all compiler warnings
@@ -11,7 +11,7 @@ $ gcc - Wshadow prog.c
 // enables shadow file warnings
 
 $ gcc -fsanitize=address -static-libasan prog.c
-// detects memory errors and displas problem lines within prog.c
+// detects memory errors and displays problem lines within prog.c
 
 $ gcc -fprofile-arcs -ftest-coverage prog.c
 // creates "Test coverage files" and enables command gcov for diagnosis
