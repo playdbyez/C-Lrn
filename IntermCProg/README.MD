@@ -1,6 +1,6 @@
 Ideas and solutions for the book  
 >>Intermediate C Programming  
->> https://engineering.purdue.edu/HELPS/Publications/intermediatecbook.pdf  
+>> engineering.purdue.edu/HELPS/Publications/intermediatecbook.pdf  
 >> github@ yunghsianglu/IntermediateCProgramming
 
 
