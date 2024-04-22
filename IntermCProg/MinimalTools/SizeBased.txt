@@ -1,0 +1,31 @@
+################ :: Minimal C programming :: ##################
+Tools and methods mentioned in this file are concerned exclusively with managing 
+the size of the program which in turn, may impact the program's performance negatively
+
+
+----------------------------------------------------------------------------------------------------
+# pragma pack (1)
+// To be placed at the header of struct or main file,
+// This header ensures that no extra memory space is added inbetween
+   attributes, in order to preserve the size of the program
+// Without this header call, the compiler may align attributes for better exectuion speed instead
+
+----------------------------------------------------------------------------------------------------
+#include <stdint.h>
+
+Integer types
+int8_t small = 1 byte
+int16_t medium = 2 bytes
+int32_t large = 4 bytes
+
+Unsigned types
+uint8_t small = 1 bytes
+uint16_t medium = 2 bytes
+uint32_t large = 4bytes
+// This header defines fixed sizes for variables of the type int
+// Each attribute's size is guaranteed to be the same accross different machines
+
+----------------------------------------------------------------------------------------------------
+int n = 4;
+int *arrptr;
+arrptr =
