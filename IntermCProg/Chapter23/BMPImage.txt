@@ -1,0 +1,7 @@
+
+############################### :: IMAGE PROCESSING:: ################################
+
+<> Extraction of image attributes are heavily reliant on the order that the attributes are extracted in and stored.
+
+> BitMaP (.bmp)
+> Joint Photographic Experts Group (.jpeg)
