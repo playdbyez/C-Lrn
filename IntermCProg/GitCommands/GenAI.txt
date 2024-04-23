@@ -3,3 +3,17 @@
 - ChatGPT   (OpenAI)
 - Bard      (Google)
 - CoPilot   (Github)
+
+############################### :: EXTERNAL LIBS:: ################################
+- Boost
+- Gunslinger
+- Raylib
+
+
+
+####################:: LIBRARY LOCATION (UNIX) ::####################
+
+$ grep EOF /usr/include/stdio.h
+# define EOF (-1)
+
+
