@@ -1,6 +1,7 @@
 ################ :: Minimal C programming :: ##################
 Tools and methods mentioned in this file are concerned exclusively with managing 
-the size of the program which in turn, may impact the program's performance negatively
+the size of the program which in turn, may impact the program's performance negatively.
+Used frequently for embeded systems or systems with a small storage space.
 
 
 ----------------------------------------------------------------------------------------------------
@@ -8,24 +9,41 @@ the size of the program which in turn, may impact the program's performance nega
 // To be placed at the header of struct or main file,
 // This header ensures that no extra memory space is added inbetween
    attributes, in order to preserve the size of the program
-// Without this header call, the compiler may align attributes for better exectuion speed instead
+// Without this header call, the compiler may sparsely align attributes for better execution speed instead
 
 ----------------------------------------------------------------------------------------------------
 #include <stdint.h>
 
-Integer types
-int8_t small = 1 byte
+//Integer types
+int8_t small   = 1 byte
 int16_t medium = 2 bytes
-int32_t large = 4 bytes
+int32_t large  = 4 bytes
 
-Unsigned types
-uint8_t small = 1 bytes
+//Unsigned types
+uint8_t small   = 1 bytes
 uint16_t medium = 2 bytes
-uint32_t large = 4bytes
+uint32_t large  = 4bytes
+
 // This header defines fixed sizes for variables of the type int
 // Each attribute's size is guaranteed to be the same accross different machines
 
 ----------------------------------------------------------------------------------------------------
+#include <stdlib.h>
+
 int n = 4;
 int *arrptr;
-arrptr =
+arrptr = (int *) malloc (sizeof (int) * n);
+free (arrptr);
+
+// This function from stdlib creates extra space in Heap for the allocation of 
+   a flexible size array in which, its size is unknown before run time of the program.
+// Heap memory must be released back to the OS once the program is done with it.
+   This call to free() is usually done at the end of the function.
+
+n = 8;
+arrptr = (int *) realloc (arrptr, sizeof (int) * n);
+free(arrptr);
+
+// A supporting function that alters the end-delimiter of the array stored in the Heap
+   by the value of n without losing the data already stored in said Heap.
+// Memory must be freed after use.
