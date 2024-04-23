@@ -1,0 +1,5 @@
+############################### :: GENERATIVE ARTIFICIAL INTELLIGENCE TOOLS:: ################################
+
+- ChatGPT   (OpenAI)
+- Bard      (Google)
+- CoPilot   (Github)
