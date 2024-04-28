@@ -1,9 +1,9 @@
-//Requires a sorted array to operate one
+//Requires a sorted array to operate on
 //Returns the index of the searched key within the array
-//The input supplyed at main(), denotes the size of the array
+//The input 'num' supplied at main(), denotes the size of the array
 //The key searched for is generated randomly: 
-//upon an even number of the for loop's iterator, an array element is selected for searching
-//upon an odd number of the for loop's iterator, a random value is generated for searching
+//--upon an even number of the for loop's iterator, an array element is selected for searching
+//--upon an odd number of the for loop's iterator, a random value is generated for searching
 
 
 #include <stdio.h>
