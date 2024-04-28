@@ -12,14 +12,14 @@
 #include <string.h>
 #define RANGE 1000
 
-int arrGen(int size);  // Generate a sorted array
+int *arrGen(int size);  // Generate a sorted array
                        // Defined later in the file
 
 static int binarySearchHelp(int *arr, int low, int high, int key)
 {
   if (low > high) {return -1;} // array has no elements
   int ind = (low+ high) /2;
-  if (arr[ind] == key) {return ind} // found key
+  if (arr[ind] == key) {return ind;} // found key
   if (arr[ind] > key) {return binarySearchHelp(arr, low, ind-1, key);}
 return binarySearchHelp(arr, ind+1, high, key);  
 }
@@ -27,7 +27,7 @@ return binarySearchHelp(arr, ind+1, high, key);
 int binarySearch(int *arr, int len, int key)
 {return binarySearchHelp(arr, 0, len-1, key);}
 
-void printArray(int *arr, len); // Defined later within the file
+void printArray(int *arr, int len); // Defined later within the file
 
 int main (int argc, char * argv[])
 {
@@ -43,7 +43,7 @@ int num = strtol(argv[1], NULL, 10);
           int key;
           if ((count %2) == 0) {key = arr[rand() % num];}
           else {key = rand() % 10000;}
-          printf("Search(%d)\n[found at index %d]\n", key, binarySearch(arr, num, key));
+           printf("Search(%d)\n[found at index %d]\n\n", key, binarySearch(arr, num, key));
         }
   free (arr);
   return 0;
@@ -51,7 +51,7 @@ int num = strtol(argv[1], NULL, 10);
 
 int *arrGen(int size)
 {
-  if (size =< 0){return -1;}
+  if (size <= 0){return -1;}
   int *arr = malloc (sizeof(int) * size);
   if (arr == NULL) {return -1;}
   srand(time(NULL));
@@ -62,7 +62,7 @@ int *arrGen(int size)
  return arr; 
 }
 
-void printArray(int *arr, len)
+void printArray(int *arr, int len)
 {
   int ind;
   for (ind = 0; ind < len; ind++)
