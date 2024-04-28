@@ -1,8 +1,14 @@
 // Intermediate C 16.2
 // Recursive implementation of the Quick Sort method of sorting 
-// Quick Sort functions by comparing values to a pivot number
 // Only works on unsorted arrays
 // For more efficient Transitivity in its comparisons, the value of the Pivot should be randomized
+// Its method of sorting works by:
+// 1- Assigning a pivot number 
+// 2- Having an iterator increasing through the list in order to find a bigger value than the pivot 
+// 3- Having another iterator decreasing from the end, in order to find a smaller value than the pivot
+// 4- if both matches are found then both iterators are swapped
+// 5- if only one iterator finds a match, the pivot will swap with it
+
 
 #include <stdio.h>
 #include <stdlib.h>
