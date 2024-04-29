@@ -29,7 +29,4 @@
 > One major limitation with Linked lists relates to the searching method, since searching for a particular node requires
   iterating through every node in the list, in this aspect a simple binary search tree is superior.
   
-  > Operations supported: 
-                        - Insert
-                        - Search
-                        - Delete
+ 
