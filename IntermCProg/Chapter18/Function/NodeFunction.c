@@ -1,4 +1,15 @@
+/*
+  > Operations supported: 
 
+                        - Insert at the back of the list
+                        - Insert at the front of the list
+                        - Search the list for a single value
+                        - Delete a single node
+                        - Delete all nodes
+                        - Print list
+
+*/
+                          
 #include "list.h"
 #include <stdio.h>
 #include <stdlib.h>
