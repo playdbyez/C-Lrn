@@ -2,6 +2,7 @@
 ############################### :: IMAGE PROCESSING:: ################################
 
 <> Extraction of image attributes are heavily reliant on the order that the attributes are extracted in and stored.
+<> Operating on a .bmp file requires reading it as a binary file  
 
 > BitMaP (.bmp)
 > Joint Photographic Experts Group (.jpeg)
