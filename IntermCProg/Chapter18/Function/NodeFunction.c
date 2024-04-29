@@ -61,7 +61,12 @@ Node *List_delete (Node *head, int val)
 {
   printf("Deleting %d\n", val);
   Node *q = head;
-          if (q == NULL){return -1;}               // Empty list 
+          if (q == NULL)                           // Empty list 
+                {
+                  printf ("\nList is empty.\n");
+                  return 0;
+                }
+  
           if (q->value == val)                     // Deleting the head node
               {
                 head = head ->next;
@@ -98,8 +103,8 @@ void List_print(Node *head)
 void List_destroy(Node *head)                      // Delete the whole list
 {
   while (head != NULL){
-        Node *p = head.next;
-        free(head)
+        Node *p = head->next;
+        free(head);
         head = p;  
   }
 }
