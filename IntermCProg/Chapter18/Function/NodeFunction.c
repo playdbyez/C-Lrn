@@ -94,3 +94,4 @@ void List_destroy(Node *head)                      // Delete the whole list
 }
 
 // main() is declared on  a separate file
+// Node *head = NULL; ( instance declaration within main())
