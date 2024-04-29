@@ -1,4 +1,12 @@
-// Intermediate C 16
+// Intermediate C 16.3
+// Requires a list of distinct elements
+// Operates on the whole list
+// Permutates an indefinite ammount of times in order to shuffle the index of each element untill
+// all possible combinations of output are generated
+
+//Formula = N!
+// 0 x 1 x 2 x 3 x ... N
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -33,6 +41,8 @@ void permute(int *arr, int num) { permuteHelp(arr, 0, num); }
 // MAIN FUNCTION
 // Input required denotes the size of the array to allocate
 // The allocated array stores capital letters of the alphabet in ascending order
+// num should equal 26
+// arr[0] = A, arr[1] = B, etc...
 int main( int argc, char * argv[])
 {
   if (argc != 2){  printf("\nERROR: Need an integer\n "); return -1;}
