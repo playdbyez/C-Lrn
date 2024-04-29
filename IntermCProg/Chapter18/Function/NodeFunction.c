@@ -19,7 +19,7 @@ static Node *Node_construct(int val)
   Node *nd = malloc (sizeof (Node));
   nd -> value = val;
   nd -> next = NULL;
-  return nd
+  return nd;
 }
 
 //Newly inserted items are placed at the beginning of the list and the first inserted item is a the end of the list
