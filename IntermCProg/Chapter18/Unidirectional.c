@@ -1,3 +1,4 @@
+//This a unidirectional implementation of a linked  list
 #include <stdio.h>
 #include <stdlib.h>
 
