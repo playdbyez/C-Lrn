@@ -8,7 +8,7 @@ typedef struct listnode
   int value;
 }Node;
 
-static Node *Node_construct(int val)
+static Node *Node_Biconstruct(int val)
 {
   Node *nd = malloc (sizeof (Node));
   nd -> value = val;
@@ -22,8 +22,8 @@ Node *List_Binsert(Node *head, int val)
   //printf("Insert at TAIL (%d)\n", val);
   Node *ptr = Node_Biconstruct(val);
   if (head == NULL)
-  {   ptr -> next = head;
-      ptr -> prev = head; 
+  {   ptr -> next = NULL;
+      ptr -> prev = NULL; 
       ptr-> value = val;  }
     
 
@@ -32,7 +32,7 @@ Node *List_Binsert(Node *head, int val)
       ptr -> next = head;
       ptr -> prev = NULL;  
       ptr -> value = val;
-    
+      qtr -> prev = ptr;
   }
 return ptr;                    
 }
