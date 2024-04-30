@@ -98,7 +98,9 @@ void List_destroy(Node *head)                      // Delete the whole list
         head = p;  
   }
 }
-
+//Reverses the links between nodes
+// its argument required is the first node of the list
+// returns the reversed head of the list
 Node *List_reverse(Node *head)
 {
   if (head == NULL) {return NULL;}    //empty list
