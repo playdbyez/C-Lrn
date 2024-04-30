@@ -1,6 +1,5 @@
 //This implementation of a bidarectional list
-// uses a stack-like insertion method with supporting functions such as
-// Reversing the list, printing the list and Deleting the whole list
+// OPERATIONS : StackInsert
 
 #include <stdio.h>
 #include <stdlib.h>
