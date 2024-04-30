@@ -1,4 +1,5 @@
 //This a unidirectional implementation of a linked  list
+// OPERATIONS: StackInsert, QueueInsert, Search, Delete, Reverse and Print
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -106,13 +107,14 @@ Node *List_reverse(Node *head)
   Node * origsec = NULL;
           while(orighead != NULL)
             {
+               
               origsec = orighead->next;
               orighead -> next = revhead;
               revhead = orighead;
               orighead = origsec;
             }
-  head revhead;
-  return head;
+
+  return revhead;
 }
 
 int main( int argc, char * argv[])
@@ -135,7 +137,7 @@ int main( int argc, char * argv[])
   head = List_delete (head, 263);                // Head Node
   List_print(head);
   head = List_delete (head, 917);                // Tail node
-  List_reverse(head);                            //Not functioning well
+  head = List_reverse(head);
   List_print(head);
   List_destroy(head);
 return 0;
