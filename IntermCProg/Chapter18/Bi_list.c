@@ -19,7 +19,7 @@ static Node *Node_Biconstruct(int val)
 
 Node *List_Binsert(Node *head, int val)
 {
-  //printf("Insert at TAIL (%d)\n", val);
+  
   Node *ptr = Node_Biconstruct(val);
   if (head == NULL)
   {   ptr -> next = NULL;
@@ -28,11 +28,11 @@ Node *List_Binsert(Node *head, int val)
     
 
   else { 
-    Node *qtr = ptr->next;
+    
       ptr -> next = head;
       ptr -> prev = NULL;  
       ptr -> value = val;
-      qtr -> prev = ptr;
+      head -> prev = ptr;
   }
 return ptr;                    
 }
@@ -40,16 +40,17 @@ return ptr;
   int main ()
 {
 Node *head;
-//head -> index = 0;
+
   head = List_Binsert(head,878);
   head = List_Binsert(head,5);
   head = List_Binsert(head,511);
   
-  while (head != NULL)
-  {
+ 
       printf ("%d\n",head-> value);
       head = head -> next;
-  }
+      printf ("%d\n",head-> value);
+      head = head -> prev;
+      printf ("%d\n",head-> value);
   
   
     return 0;
