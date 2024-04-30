@@ -98,6 +98,22 @@ void List_destroy(Node *head)                      // Delete the whole list
   }
 }
 
+Node *List_reverse(Node *head)
+{
+  if (head == NULL) {return NULL;}    //empty list
+  Node * orighead = head;
+  Node * revhead = NULL;
+  Node * origsec = NULL;
+          while(orighead != NULL)
+            {
+              origsec = orighead->next;
+              orighead -> next = revhead;
+              revhead = orighead;
+              orighead = origsec;
+            }
+  head revhead;
+  return head;
+}
 
 int main( int argc, char * argv[])
 {
@@ -119,6 +135,7 @@ int main( int argc, char * argv[])
   head = List_delete (head, 263);                // Head Node
   List_print(head);
   head = List_delete (head, 917);                // Tail node
+  List_reverse(head);                            //Not functioning well
   List_print(head);
   List_destroy(head);
 return 0;
