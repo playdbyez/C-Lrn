@@ -1,3 +1,0 @@
-<> Even though we can modify values outisde the index,
-   the main() function is the one that outputs the changes
-<> Considered a flaw
