@@ -20,7 +20,7 @@ static Node *Node_construct(int val)
 Node *List_Binsert(Node *head, int val)
 {
   //printf("Insert at TAIL (%d)\n", val);
-  Node *ptr = Node_construct(val);
+  Node *ptr = Node_Biconstruct(val);
   if (head == NULL)
   {   ptr -> next = head;
       ptr -> prev = head; 
