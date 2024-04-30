@@ -1,3 +1,6 @@
+//This implementation of a bidarectional list
+// uses a stack-like insertion method
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -24,7 +27,7 @@ Node *List_Binsert(Node *head, int val)
   if (head == NULL)
   {   ptr -> next = NULL;
       ptr -> prev = NULL; 
-      ptr-> value = val;  }
+      ptr -> value = val;  }
     
 
   else { 
@@ -51,6 +54,9 @@ Node *head;
       printf ("%d\n",head-> value);
       head = head -> prev;
       printf ("%d\n",head-> value);
+      head = head -> prev;
+      if (head == NULL)
+      printf ("NULL\n");
   
   
     return 0;
