@@ -16,7 +16,7 @@ static Node *Node_construct(int val)
 }
 
 //Newly inserted items are placed at the beginning of the list and the first inserted item is a the end of the list
-//Beginning = head of the list
+//Behaves like a stack
 Node *List_pushfront(Node *head, int val)
 {
   printf("Inserting %d\n", val);
