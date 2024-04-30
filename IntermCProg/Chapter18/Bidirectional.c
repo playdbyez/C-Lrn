@@ -39,7 +39,7 @@ return ptr;
 
 //Values should be traversed through with a void print function
 // but defined in main() here for demonstration purposes 
-// since reversing the list have been halted due to h0moSensual reasons (30.April)
+// since reversing the list have been halted due to Uxsexual reasons (30.April)
   int main ()
 {
 Node *head;
