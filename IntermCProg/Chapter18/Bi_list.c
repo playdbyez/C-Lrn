@@ -6,7 +6,6 @@ typedef struct listnode
   struct listnode *next;
   struct listnode *prev;
   int value;
-  int index;
 }Node;
 
 static Node *Node_construct(int val)
