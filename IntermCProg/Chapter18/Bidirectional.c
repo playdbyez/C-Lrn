@@ -1,5 +1,6 @@
 //This implementation of a bidarectional list
-// uses a stack-like insertion method
+// uses a stack-like insertion method with supporting functions such as
+// Reversing the list, printing the list and Deleting the whole list
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -22,7 +23,6 @@ static Node *Node_Biconstruct(int val)
 
 Node *List_Binsert(Node *head, int val)
 {
-  
   Node *ptr = Node_Biconstruct(val);
   if (head == NULL)
   {   ptr -> next = NULL;
@@ -30,16 +30,16 @@ Node *List_Binsert(Node *head, int val)
       ptr -> value = val;  }
     
 
-  else { 
-    
-      ptr -> next = head;
-      ptr -> prev = NULL;  
-      ptr -> value = val;
-      head -> prev = ptr;
-  }
+else {  ptr -> next = head;
+        ptr -> prev = NULL;  
+        ptr -> value = val;
+        head -> prev = ptr;  }
 return ptr;                    
 }
 
+
+//Values should be traversed through with a void print function
+// but defined in main() here for demonstration purposes 
   int main ()
 {
 Node *head;
