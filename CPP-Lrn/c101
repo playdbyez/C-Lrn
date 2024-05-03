@@ -15,10 +15,13 @@ In the case of statements, which are executed sequentially one statement after t
  
 Once joined, a matching statement together with an object type will result in an expression.
 
+In C++ , classes are defined as a version of struct from classic C but with features like data protection and inheritance.
+
 Classes can be implemented to define new object types, resulting in a class type.
 
 C++ allows classes to make use of types that include operations as well as data.
 
+Additionally, C++ has more reserved words than C.
 
 
 
