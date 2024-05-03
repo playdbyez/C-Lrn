@@ -1,5 +1,6 @@
 // Intermediate C 8.3.1
 // Sorting algorithm in which smaller numbers move to the beginning of the array like bubbles floating up
+// Identical to Selection sort
 
 #include <stdio.h>
 #include <stdlib.h>
