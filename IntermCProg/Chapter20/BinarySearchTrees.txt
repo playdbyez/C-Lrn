@@ -7,11 +7,20 @@
 
 <> The root node is used as the entry point of the structure and thus any node can be accessed via the root node
 
+<> When the root node is removed, it must be replaced with the smallest node within the tree's right subtree
+
 <> Tree nodes are either a branch node or leaf node:
     - Branch node = has child nodes attached bellow only other nodes with 2 children attached
     - Leaf node   = has no child nodes bellow and no sibling node attached to its parent
 
 <> To function, this structure supports database operations like Insert, Search and Delete.
+
+<> Traversal order of a tree refers to the order in which the tree is displayed to output in a non-graphic approach:
+    - Pre-order  = 
+    - Post-order = 
+    - In-order   = 
+
+
 <> The Search functionality also has some requirements and parameters:
     - List  = must be totally ordered with no repeating key values
 
