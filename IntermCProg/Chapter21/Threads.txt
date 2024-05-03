@@ -33,6 +33,19 @@
    to enable core management within gcc with the following argument:
       $ gcc main.c -lpthread
 
+<> Pthread macro:
+int pthread_create (  pthread_t * restrict thread,
+                    const pthread_attr_t * restrict attr,
+                    void * ( *START_ROUTINE) (void*),
+                    void * restrict arg )
+
+<> Pthread function calling:
+main ()
+{ pthread_t st;
+  int rtv;
+  rtv = pthread_create(&st, NULL, printHello, (void*) &arg);
+  if (rtv != 0) { printf("ERROR: Thread creation failed.\n"); }
+}
 
 
 
