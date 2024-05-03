@@ -1,6 +1,6 @@
 // Intermediate C 16.2
 // Recursive implementation of the Quick Sort method of sorting 
-// Only works on unsorted arrays
+// Requires an unsorted array to operate on
 // For more efficient Transitivity in its comparisons, the value of the Pivot should be randomized
 // Its method of sorting works by:
 // 1- Assigning a pivot number 
