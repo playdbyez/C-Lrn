@@ -1,0 +1,168 @@
+
+			####################
+			####   C++ 101  ####
+			####################
+
+In practice, C++ simply suplies the mechanisms for defining new data structures.
+ 
+				1.Bilt-in object types. (exists)
+				2.Operation operators.  (becomes)
+				3.Statements of flow.	 (does)
+			 	
+Most programming languages depend on the type of an object to limit its possible operations.
+
+In the case of statements, which are executed sequentially one statement after the other, only certain types of objects complement certain statements of control.
+ 
+Once joined, a matching statement together with an object type will result in an expression.
+
+In C++ , classes are defined as a version of struct from classic C but with features like data protection and inheritance.
+
+Classes can be implemented to define new object types, resulting in a class type.
+
+C++ allows classes to make use of types that include operations as well as data.
+
+Additionally, C++ has more reserved words than C.
+
+
+
+Statements:				Types:				Operators
+
+	if				int				++
+	else				float				<
+	for				char				==
+	while				bool				=
+	switch				void
+	throw				vector
+	try				double
+	break				string
+	do while
+	continue
+	goto
+	
+	
+
+Expressions:
+	
+	if(a<b)
+	while(true)
+	for(int a; a<=10; ++a)
+	else
+	
+
+Operators can always be used as a condition for a function.
+[If( y<5; ++y )]
+
+
+( = ) operator for assignment
+[water = an object]
+
+( == ) operator for equality
+[color yellow == color gold]
+
+( += ) operator for compound assignment
+[x+=y is the same as x = x+y]
+
+
+( != ) operator for inequality
+[north != down]
+
+
+###############################
+  int	MAIN Composition
+##############################
+
+>>Compiler Directive points to a standard library header
+
+
+:#include <-[directive] | <fsstream> <-[header]
+
+
+>>Function Code Structure
+
+[return type]-> int | main <-[function name] | () <-[Parameter list]
+
+[function body]-> {  | if.blah.print blah.calculate blah.return  <-[Block of statements] 
+
+[operand]-> cin | >> <-[operator]
+[expression]-> cout <<  2;
+[return of type int]-> return 0;
+
+
+[function body]-> } 
+
+
+:The 'header' must be single-line and be outside any function.
+:The 'int main()' function requires a return of type 'int' which is '0' in this case.
+:The value returned from main is a status indicator. 
+:0 = success  non-0 = error defined by the system.
+:input data is stored in variables, variables have a type (int,float,double,bool,real,etc)
+:SourceFile.suffixes can be (.cpp/ .cc/ .cxx/ .c/ .c)
+
+:C++ does not define input/output statements instead, C++ includes a standard library provided by libHeaders that provides IO capabilities.
+
+
+####################
+###### CLASSES #####
+####################
+
+------------------------------------------------
+|Classes = 1.Data abstraction & 2.Encapsulation.|
+------------------------------------------------
+
+
+1.Data abstraction = ( implementation + interface)
+
+>>>Data abstraction:
+Programming technique that relies on the sepration of interface and implementation
+
+>>implementation = functions of a class that constitute and define the class which are not intended for general use.
+
+>>interface = consists of the operations that a class can execute, aka, its options and features.
+
+
+
+2.Encapsulation = ( hiden implementation )
+
+>>>Encapsulation enforces only the availability of the inerface to its users and encryption on the implementation.
+
+
+
+
+
+
+
+-------------------------------------------------
+|Class(Abstrac + Encaps) = An abstract data type|
+-------------------------------------------------
+In an abstract data type the focus is on usage and no access to its individual implementation is allowed.
+Leaving users to wonder, abstractly, about the class' composition and implementation.	
+
+
+
+
+#################
+#### OBJECTS ####
+#################
+
+
+/Visualisation:
+
+int _someName = Jules;
+
+
+int = Type Integer
+some_Name = Variable Identifier
+Jules = an object
+
+
+The int some_Name; 
+is a declared Type (int) with an Identifier(some_Name)as a variable that defines the value (Jules) of the object.
+
+
+Variables:
+
+	>Case Sensitive
+	>Can't use two underscores
+	>Can't begin with an underscore followed by UpperCase
+	>If defined outside a function, Can't begin with underscore
+	>Can't start with Number either ?
