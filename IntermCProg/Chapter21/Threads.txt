@@ -7,6 +7,9 @@
 <> Threads is designed wih parallel programing in mind, for the benefit of making a program
    execute faster via a multi-core processor.
 
+<> A program is defined by a main thread regardless if the pthread function has been called, 
+   hence is usually neccessary to use thread_join after thread_create in order to sync the newly created thread.
+
 <> In regards to core utilization, programs can then be divided into two types:
    
    > Sequential Program = Single thread process designed for a single core system
@@ -34,17 +37,36 @@
       $ gcc main.c -lpthread
 
 <> Pthread macro:
+#include <pthread.h>
 int pthread_create (  pthread_t * restrict thread,
                     const pthread_attr_t * restrict attr,
                     void * ( *START_ROUTINE) (void*),
                     void * restrict arg )
 
+
+  1) address of a pthread_t object.
+
+  2) address of a pthread_attr_t structure can be used to define optional 
+     features to the thread being created, use NULL for creating a thread with default options.
+
+  3) void type function to be executed within this thread's life cycle, the functions must have 
+     only one argument and it must be of type void 
+  4) The argument to the fuctions specified in the previous section, it must be cast to void * 
+
+
+
+
+
 <> Pthread function calling:
 main ()
 { pthread_t st;
+  int arg = 12;
   int rtv;
   rtv = pthread_create(&st, NULL, printHello, (void*) &arg);
-  if (rtv != 0) { printf("ERROR: Thread creation failed.\n"); }
+          if (rtv != 0) { printf("ERROR: Thread creation failed.\n"); }
+  rtv = pthread_join(second, NULL)
+          if (rtv != 0) { printf("ERROR: Thread synchronization failed.\n"); }
+
 }
 
 
