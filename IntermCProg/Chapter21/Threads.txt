@@ -49,7 +49,7 @@ int pthread_create (  pthread_t * restrict thread,
   2) address of a pthread_attr_t structure can be used to define optional 
      features to the thread being created, use NULL for creating a thread with default options.
 
-  3) void type function to be executed within this thread's life cycle, the functions must have 
+  3) void * type function to be executed within this thread's life cycle, the functions must have 
      only one argument and it must be of type void 
   4) The argument to the fuctions specified in the previous section, it must be cast to void * 
 
