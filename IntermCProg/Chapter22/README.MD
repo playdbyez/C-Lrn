@@ -13,3 +13,5 @@ K = 7
 Solution1 = {1,2,4}  
 Solution2 = {3,4}  
 Solution3 = {2,5}  
+>> This problem has no quick solution  
+>> A sequential and a parallel implementation are included
