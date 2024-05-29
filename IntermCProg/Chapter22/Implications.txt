@@ -1,0 +1,12 @@
+## Rules ##
+[] For a set of N elements thre are 2^N possible subsets to evaluate
+[] These implementations will limit the size of N to 31
+    if N is unlimited, for example N = 400
+    then that would imply 2^400 possible subsets and that is incalculable 
+
+##############################################
+Subset sums are often studied in crpytography
+In computer science, quick is equal to a polynominal-time algorithm.
+Polynominal-time algorithm's execution time is bounded by a polynominal function of the input size
+
+... L' Hospital Rule from calculus
