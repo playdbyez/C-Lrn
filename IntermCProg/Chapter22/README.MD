@@ -6,7 +6,7 @@
    subset turns out to be equal to K ?  
 
 
->>I.E.  
+-Example-  
 >> A = {1, 2, 3, 4, 5}  
 >> K = 7  
 >> Solution1 = {1,2,4}  
