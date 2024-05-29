@@ -1,4 +1,5 @@
-[ SUBSET SUM ]
+[ SUBSET SUM ]  
+
 // Target value is K and K >0  
 // Set A is an array of values of size N  
 // Can Set A be partitioned into a subset in which the sum of all elements of said
