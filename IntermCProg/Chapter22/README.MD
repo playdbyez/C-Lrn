@@ -3,7 +3,7 @@
 // Target value is K and K >0  
 // Set A is an array of values of size N  
 // Can Set A be partitioned into a subset in which the sum of all elements of said
-   subset turns out to be equal to the target value K ?
+   subset turns out to be equal to the target value K ?  
 // Multiple solutions are possible  
 
 
