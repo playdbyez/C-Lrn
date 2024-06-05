@@ -9,24 +9,52 @@ char *Rdek;
 char *Ldek;
 
 time_t t;
+srand ((unsigned) time(&t));
+
 int lowmid = (sizeof(deck) / sizeof(deck[0]))/4;
 int himid = ((sizeof(deck) / sizeof(deck[0]))/4*3) - (lowmid/2);
-
-srand ((unsigned) time(&t));
 int cutpnt =  lowmid + (rand() % (himid - lowmid)); 
-int rr[sizeof (deck) - cutpnt];
+
+
+//allocates the right-hand Deck
+char rr[(sizeof (deck)/ sizeof(deck[0])) - cutpnt] [2];
     int p = 0;
-    for (int h = cutpnt; h < sizeof(deck); h++){rr[p] = deck[h]; p++;}
-char ll[cutpnt];
-    for (int h = 0; h < cutpnt; h++){ll[h] = deck[h];}
+    for (int h = cutpnt; h < sizeof(deck)/ sizeof(deck[0]); h++)
+    {
+            for (int hb = 0; hb < sizeof(deck[0]); hb++)
+            { rr[p][hb] = deck[h][hb]; printf("%c ", rr[p][hb]); }
+            p++;        
+    }
+    
+    printf("\n");
 
- //Output
+//copy the above nested-loop and apply to leftDeck    
+    
+    
+ //Output    
+    /*
+    h -> 5-12
+    hb -> 0-1 (7x)
+    for (int h = cutpnt; h < sizeof(deck)/ sizeof(deck[0]); h++)
+        {
+            for (int hb = 0; hb < sizeof(deck[0]); hb++)
+            { rr[p][hb] = deck[h][hb]; printf("%c", rr[p][hb]); }
+            p++;        
+        }
+    
+// char ll[cutpnt][2]; for (int h = 0; h < cutpnt; h++){ll[h] = deck[h][0];}
 
-//Wrongly outputed    
-//for (int i =0; i < strlen(ll); i++){ printf("%c ", ll[i]); }
-//    printf("\n");
-//for (int i =0; i < strlen(rr); i++){ printf("%c ", rr[i]); }
 
+
+   
+
+    for (int i =0 ; i < sizeof(deck)/ sizeof(deck[0]); i++)
+        {
+            for (int j = 0; j < sizeof(deck[0]); j++)
+            { printf("%c",rr[i][j]); }
+            printf(" ");        
+        }
+*/
 //Deck's cut-point
 //printf("%d", cutpnt);
     
