@@ -70,6 +70,51 @@ main ()
 }
 
 
+############################### :: AMDAHL'S LAW :: ################################
+>> CHAPTER 23 <<
+
+Generally a program's execution time can be improved either through overclocking or threading.
+For a parallel program, when pipelining is applied efficiently in order to synchronize a threaded program's multiple operations into a single output, the concept of "diminishing return" is then also applied to its execution speed and this entails reducing its execution time through increasing the amount of cores used by the program.
+ 
+However, a certain limitation imposed by a programs' initialization and finalization stages will always account for 1% of its total execution time.
+Thus, the increase of cores will only account for optimizing the remaining 99% of the execution time.
+ 
+Example program:
+> TotalExecTime  (T) 
+> Init/Fin       (R)
+> PipelinedExec  (Pe)
+> N# Cores       (n)
+ 
+Calculation of execution improvement per n cores:
+T  = 100s
+R  = 1s
+Pe = 99s
+n  = 2
+Pe2 = Pe / n  = 49.5s
+T   = R + Pe2 = 50.5  
+>> Improvement of 49.5s shaved off its previous time <<
+
+
+Additionally, Amdahl's law  infers that another limitation can be applied to parallel programs which refers to the variable percentage of execution that is not amenable to pipelining (r).
+These limitations can be identified more accurately through a calculus approach via Amdahl's "Speedup formula" that makes use of the "Efficiency formula" noted bellow.
+
+ 
+ 
+ 
+ 
+
+
+trueleappress.com/wp-content/uploads/2023/03/coping-with-snitch-culture-historical-examples-current-proposals.pdf
+ 
+ 
+https://www.youtube.com/watch?v=LG-liWi-04w
+https://www.youtube.com/watch?v=DeI8cCX9o4I
+
+
+https://www.youtube.com/watch?v=Me96OWd44q0
+
+
+
 
 https://www.youtube.com/watch?v=LOfGJcVnvAk
 https://www.youtube.com/watch?v=4rLW7zg21gI
