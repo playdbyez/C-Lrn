@@ -1,14 +1,6 @@
 https://engineering.purdue.edu/ece264/17au/hw/HW07
-// makes u se of combinatronics
+// makes use of combinatronics
 
-/******************************************************************************
-
-Welcome to GDB Online.
-GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
-C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
-Code, Compile, Run and Debug online from anywhere in world.
-
-*******************************************************************************/
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
@@ -21,13 +13,12 @@ static void swap (int *a, int *b)
   *b = s;
 }
 
-//invoking quiksort:
-// quickSort(arr,0, sizeof(arr)-1 );
+//invoking quicksort from main: quickSort(arr,0, sizeof(arr)-1 );
 static void quickSort (int *arr, int first, int last)
 {
   
-  if (first >= last){return;} // no need to sort one or no element
-  int pivot = arr[first];     // pivot is assigned the first item of the array not a random number
+  if (first >= last){return;}  // no need to sort one or no element
+  int pivot = arr[first];      // pivot is assigned the first item of the array not a random number
   int low = first + 1;
   int high = last;
       while (low < high)
@@ -88,10 +79,9 @@ int llen = sizeof (ll) / sizeof(ll[0]);
 int rren = sizeof (rr) / sizeof(rr[0]);
 int smlr = llen < rren ? llen : rren;
 printf("\nsmaller deck being of len %d", smlr);
+  //int anor = rand() % 
   
-    
-  //int anor = rand() %   
- //Output    
+  //Output    
 //Deck's cut-point
 //printf("%d", cutpnt);
 //    
