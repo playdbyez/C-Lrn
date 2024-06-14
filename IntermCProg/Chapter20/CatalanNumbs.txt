@@ -1,0 +1,33 @@
+#####:: Catalan Numbers ::#####
+These are definied within the combinatorics branch of discrete mathematics through the use of algebraic expressions.
+Directedly tied to permutations of certain kinds.
+
+>> Catalan Sequence [len = 20]
+1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862,
+16796, 58786, 208012, 742900, 2674440, 9694845, 
+35357670, 129644790, 477638700, 1767263190,
+
+The above numbers are essentially a method of narrowing the ammount of permutations through a sequence of combined factors.
+Thus this sequence is applied to the factor involved such that: 
+factor of 0 has 1 permutation 
+factor of 1 has 1 permutation
+factor of 2 has 2 permutations
+factor of 3 has 5 permutations ...
+
+
+Catalan numbers can be found in:
+[] Factorials + StackSort
+(from a set of size n, there are n! permutations.
+ hence a factor of n has catalan_th permutations that are stack sortable)
+
+[] Dyck Paths & Dyck Words
+
+[] Binary Trees
+(a tree of size n has catalan_th different possible shapes)
+
+[] Pascal's Triangle
+
+[] Optimal Paths
+( Point (0,0) to point (n,n) withouth crossing the diagonal drawn inbetween the start to end (fastes route),
+
+[] Parenthesis Positions
