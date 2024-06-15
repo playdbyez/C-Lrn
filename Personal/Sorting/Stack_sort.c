@@ -30,9 +30,10 @@ int main()
     //int set[] = {1, 5, 2, 3, 5, 4 };       //Yes
     //int set[] = {2,3,1};                   //No
     //int set[] = {8,6,5,3,1};               //Yes
+    //int set[] = {};                        //No
     int len = sizeof(set)/ sizeof(set[0]);
-    
-    
+
+    if (len <= 1 ){printf("\n[ERROR] Set size must be greater than one."); return 0;}
     
 int stack[len];
 stack[0] = -1;
@@ -88,4 +89,5 @@ int yn = 1;
    
     if (yn == 1){printf("\nIs stack sortable!");}
     if (yn == 0){printf("\nNot stack sortable!");}
+return 0;
 }
