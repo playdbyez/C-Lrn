@@ -22,3 +22,73 @@
 // 8- Once all values have been iterated through, the contents of the stack are popped to the output from last inserted until the end of the linked list
 
 
+#include <stdio.h>
+
+int main()
+{
+    //int set[] = {2,1,5,3};                 //Yes
+    int set[] = {1, 5, 2, 3, 5, 4 };       //Yes
+    //int set[] = {2,3,1};                   //No
+    //int set[] = {8,6,5,3,1};               //Yes
+    int len = sizeof(set)/ sizeof(set[0]);
+    
+    
+    
+    printf("Original = ");
+    for (int i =0; i < len; i++){ 
+                                    printf("%d", set[i]); 
+                                    if (set[i] != '\0') {printf(" ");}    }
+    
+    
+int stack[len];
+stack[0] = -1;
+    int stklen = 0;
+    int stki = 0;
+    
+    
+int outp[len];
+    int outlen = 0;
+   
+   printf("\n");
+   
+    for (int i =0; i < len; i++)
+    {
+      
+      
+      //if the stack's top is bigger, insert val above
+      if (stack[stki] != -1 && set[i] <= stack[stki])
+      { stki++; stack[stki] = set[i]; stklen++;
+          
+          printf("\ninserted %d into stack", set[i]);
+      }
+      
+      //if the stack's top is smaller, pop until top >= set[i]
+      if(stack[stki] != -1 && set[i] > stack[stki])
+            {
+                for(int j = stki; j > -1; j--){
+                                                if(stack[j] < set[i]){ outp[outlen] = stack[j]; outlen++;stki--;stklen--;}
+                                                if(stack[j] == set[i]){stki++;stack[stki] = set[i]; stklen++; }
+                                                if(stki == -1){stki = 0; stack[stki] = set[i];break;}
+                                              }
+            }
+            
+     //if the stack is empty, insert val
+      if (stack[stki] == -1){stack[stki] = set[i]; stklen++;
+      
+        //  printf("\ninserted %d into stack", set[i]); //[OK]
+      }         
+    } 
+    
+    
+    
+    
+    
+    
+     printf("\nSorted   = ");
+    for (int i =0; i < outlen; i++){ 
+                                    printf("%d", outp[i]); 
+                                    if (outp[i] != '\0') {printf(" ");}    }
+    
+    /*
+    */
+}
