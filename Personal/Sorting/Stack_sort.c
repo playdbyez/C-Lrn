@@ -27,68 +27,65 @@
 int main()
 {
     //int set[] = {2,1,5,3};                 //Yes
-    int set[] = {1, 5, 2, 3, 5, 4 };       //Yes
+    //int set[] = {1, 5, 2, 3, 5, 4 };       //Yes
     //int set[] = {2,3,1};                   //No
     //int set[] = {8,6,5,3,1};               //Yes
     int len = sizeof(set)/ sizeof(set[0]);
     
     
     
-    printf("Original = ");
-    for (int i =0; i < len; i++){ 
-                                    printf("%d", set[i]); 
-                                    if (set[i] != '\0') {printf(" ");}    }
-    
-    
 int stack[len];
 stack[0] = -1;
-    int stklen = 0;
+  int stklen = 0;
     int stki = 0;
     
     
 int outp[len];
-    int outlen = 0;
+  int outlen = 0;
    
    printf("\n");
    
     for (int i =0; i < len; i++)
     {
+//if the stack's top is bigger, insert val above
+      if (stack[stki] != -1 && set[i] <= stack[stki]) { stki++; stack[stki] = set[i]; stklen++;  }
       
-      
-      //if the stack's top is bigger, insert val above
-      if (stack[stki] != -1 && set[i] <= stack[stki])
-      { stki++; stack[stki] = set[i]; stklen++;
-          
-          printf("\ninserted %d into stack", set[i]);
-      }
-      
-      //if the stack's top is smaller, pop until top >= set[i]
+//if the stack's top is smaller, pop until top >= set[i]
       if(stack[stki] != -1 && set[i] > stack[stki])
             {
                 for(int j = stki; j > -1; j--){
                                                 if(stack[j] < set[i]){ outp[outlen] = stack[j]; outlen++;stki--;stklen--;}
-                                                if(stack[j] == set[i]){stki++;stack[stki] = set[i]; stklen++; }
-                                                if(stki == -1){stki = 0; stack[stki] = set[i];break;}
+                                                if(stack[j] >= set[i]){stki++;stack[stki] = set[i]; stklen++; }
+                                                if(stki == -1){stki = 0; stack[stki] = set[i];stklen++;break;}
                                               }
             }
             
-     //if the stack is empty, insert val
-      if (stack[stki] == -1){stack[stki] = set[i]; stklen++;
-      
-        //  printf("\ninserted %d into stack", set[i]); //[OK]
-      }         
+//if the stack is empty, insert val
+      if (stack[stki] == -1) {stack[stki] = set[i]; stklen++; }
+        
     } 
+  
+    for (int k = stklen-1; k > -1; k--){outp[outlen] = stack[k]; outlen++;}
     
     
     
     
     
+//Outputs
+int yn = 1;
+    printf("Original = ");
+    for (int i =0; i < len; i++){ 
+                                    printf("%d", set[i]); 
+                                    if (set[i] != '\0') {printf(" ");}    }
     
      printf("\nSorted   = ");
     for (int i =0; i < outlen; i++){ 
                                     printf("%d", outp[i]); 
                                     if (outp[i] != '\0') {printf(" ");}    }
     
-    /*
-    */
+    for (int i =0; i < outlen; i++){ if (outp[i] < outp[i-1]){yn = 0; break;} }
+    
+   
+    if (yn == 1){printf("\nIs stack sortable!");}
+    if (yn == 0){printf("\nNot stack sortable!");}
 }
