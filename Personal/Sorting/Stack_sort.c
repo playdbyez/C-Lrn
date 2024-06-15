@@ -21,3 +21,31 @@
 // 7- If Y >= X then X is now the top of the stack and Y goes under it
 // 8- Once all values have been iterated through, the contents of the stack are popped to the output from last inserted until the end of the linked list
 
+
+
+int findIndex(int *arr, int first, int last, int maxmin)
+{
+  int ind;
+  int answer = first;
+  for(ind = first + 1; ind <= last; ind++)
+    { if(maxmin == 1  &&  arr[answer] < arr[ind]  || maxmin == 0  &&  arr[answer] > arr[ind] ) { answer = ind; } }
+return answer;
+}
+
+int findMaxIndex(int * arr, int first, int last){ return findIndex(arr, first, last, 1); }
+int findMinIndex(int * arr, int first, int last){ return findIndex(arr, first, last, 0); }
+
+int isStackSortable(int *arr, int first, int last)
+{
+    if (first >= last){return 1;}
+  int maxIndex = findMaxIndex(arr, first, last);
+    if (first == maxIndex){return isStackSortable(arr, first+1, last);}
+    if (maxIndex == last){return isStackSortable(arr, first, last-1);}
+
+  int maxAIndex = findMaxIndex(arr, first, maxIndex - 1);
+  int minBIndex = findMaxIndex(arr, maxIndex + 1, last);
+    if (arr[maxAIndex] > arr[minBIndex]) {return 0;}
+  int sortA = isStackSortable(arr, first, maxIndex - 1); 
+  int sortB = isStackSortable(arr, maxIndex + 1, last);
+    return (sortA && sortB);
+}
