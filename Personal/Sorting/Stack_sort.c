@@ -17,7 +17,7 @@
 // 3- Create an empty array of the same size as the input list for storing output
 // 4- If the stack is empty push X to stack,
 // 5- The top value is the one pushed onto the stack last, X becomes Y
-// 6- If Y < X then pop Y out of the stack and into output
+// 6- If Y < X then pop Y out of the stack and into output until Y >= X
 // 7- If Y >= X then X is now the top of the stack and Y goes under it
 // 8- Once all values have been iterated through, the contents of the stack are popped to the output from last inserted until the end of the linked list
 
