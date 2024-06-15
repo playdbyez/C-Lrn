@@ -4,8 +4,9 @@
 // Permutates an indefinite ammount of times in order to shuffle the index of each element untill
 // all possible combinations of output are generated
 
-//Formula = N!
-// 0 x 1 x 2 x 3 x ... N
+//## Formula ##
+// Factorial of N = N!
+// N! = 0 x 1 x 2 x 3 x ... N
 
 #include <stdio.h>
 #include <stdlib.h>
