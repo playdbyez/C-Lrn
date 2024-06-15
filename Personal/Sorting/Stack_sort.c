@@ -55,7 +55,7 @@ int outp[len];
             {
                 for(int j = stki; j > -1; j--){
                                                 if(stack[j] < set[i]){ outp[outlen] = stack[j]; outlen++;stki--;stklen--;}
-                                                if(stack[j] >= set[i]){stki++;stack[stki] = set[i]; stklen++; }
+                                                if(stack[j] >= set[i]){stki++;stack[stki] = set[i]; stklen++; j--;  }
                                                 if(stki == -1){stki = 0; stack[stki] = set[i];stklen++;break;}
                                               }
             }
