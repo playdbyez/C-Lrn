@@ -6,10 +6,10 @@
 
 HOST		7	Application		End-User
 		6	Presentation		Syntax
-		5	Session		Sync & Send
+		5	Session		        Sync & Send
 		4	Transport		Segment
 	
-INTERNET	3	Network		Packets
+INTERNET	3	Network		        Packets
 		2	Data-Link		Frames
 		1 	Physical		Bits
 
@@ -23,9 +23,12 @@ Thanks to the data being treated as opaque, each layer promises not to read the 
 
 >Network Layer 3
 	Handles packets of information.
+	Manages the lo: 0.1 IP.
+	Transports packets accros the internet.
 	Implements hop-by-hop protocol
 		*Internet Router
 		*Wifi
+
 		
 ROUTERS:
 Also known as an Intermediate System, these can be altered to support remote login. 
@@ -42,6 +45,7 @@ Addressing scheme for ID'ing hosts
 
 > Transport Layer 4TCP
 	Handles application ports
+	Reposible for packing and recieving packets.
 	Implements End-To-End protocols
 		*TCP
 		*UDP
