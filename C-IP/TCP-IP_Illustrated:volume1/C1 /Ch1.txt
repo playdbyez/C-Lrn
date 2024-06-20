@@ -78,6 +78,8 @@ DCCP - Datagram Congestion Control Protocol
 
 HTTP - Hyper-Text Transmission Protocol
 DNS  - Domain Name System protocol
+       Functions by giving domains (.uk or .edu) to intermediaries 
+       called registrars controlled by the non-profit organization ICANN.
 	
 	[Forwarding] - Sending Datagram to next hop
 	[Payload]    - Main data frame passed from L2 to L3
@@ -133,23 +135,3 @@ DNS  - Domain Name System protocol
 				
 				
 				
-					:: A T T A C K S ::	      
-		
-	//CACHE POISONING
-
-
-	//ENUMERATION ATTACK
-
-
-	//CIPHER SUITE ROLLBACK ATTACK
-		
-		
-	//IP SPOOFING
-		Moding the source IP address within an IP-datagram packet
-		in order to make Attribution harder to trace
-		
-		
-		
-		
-CHECK
-VENONA System for attacks on security protocols
