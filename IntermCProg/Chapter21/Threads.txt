@@ -95,10 +95,17 @@ T   = R + Pe2 = 50.5
 >> Improvement of 49.5s shaved off its previous time <<
 
 
-Additionally, Amdahl's law  infers that another limitation can be applied to parallel programs which refers to the variable percentage of execution that is not amenable to pipelining (r).
-These limitations can be identified more accurately through a calculus approach via Amdahl's "Speedup formula" that makes use of the "Efficiency formula" noted bellow.
+Additionally, Amdahl's law  infers that another limitation can be applied to parallel programs which refers to 
+the variable percentage of execution that is not amenable to pipelining (r).
 
- 
+These limitations can be identified more accurately through a calculus approach via Amdahl's "Speedup formula" that 
+makes use of the "Efficiency formula" noted bellow.
+
+ ...
+
+Although Amdahl's law asserts that there is always a serial part to a parallel program that must be executed sequentially.
+There are also flaws in ahmdahl's law as argued by Gustafson & Barsis: 
+dl.acm.org/doi/10.1145/42411.42415
  
  
  
