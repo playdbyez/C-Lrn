@@ -34,10 +34,11 @@ Address Families
 >-AF_802           IEEE 802.2 / ISO 8802
 >-AF_ISO           ISO protocols
 >-AF_NIT           Network Interface Tap
+>-AF_SMC           Shared Memory Communications (SMC-R + SMC-D)  
 >-AF_IPX           IPX - Novel protocols
 >-AF_RDS           Reliable Datagram Sockets
 >-AF_AX25          Amateur radio AX.25 protocol
->-AF_ROSE          Amateur radio X.25 PLP
+>-AF_ROSE          Radio Amateur Telecommunications Society (AX.25 Packet Layer Protocol)
 >-AF_NETROM        Amateur radio NetROM
 >-AF_X25           ITU-T X.25 / ISO-8208 protocol
 >-AF_BLUETOOTH     Btooth low-level protocol
@@ -48,7 +49,8 @@ Address Families
 >-AF_KEY           Key management protocol (IPsec)
 >-AF_NETLINK       Kernel user interface device
 >-AF_ALG           Interface to kernel crypto API
->-AF_VSOCK         Hypervisor-guest communication protocol (VMWare VSockets) 
+>-AF_VSOCK         Hypervisor-guest communication protocol (VMWare VSockets)
+>-AF_IUCV          Hypervisor-guest Interaction (Inter-user Communication Vehicle) 
 >-AF_KCM           Kernel connection multiplexer internface (KCM)
 >-AF_TIPC          Cluster domain sockets protocol
 >-AF_CAN           Controller Area Network Automotive bus protocol
@@ -73,8 +75,8 @@ Address Families
 >-AF_DECnet        DECnet
 >-AF_WANPIPE       Wanpipe API
 >-AF_NATM          Native ATM Access
->-AF_ATMSVC        ATM SVCs (Asynchronous Transfer Mode)
->-AF_ATMPVC        ATM PVCs
+>-AF_ATMSVC        ATM SVCs (Asynchronous Transfer Mode over Switched Virtual Circuits)
+>-AF_ATMPVC        ATM PVCs (Raw Asynchronous Transfer Mode over Permanent Virtual Circuits)
 >-AF_ISDN          Integrated Services Digital Network
 >-AF_IRDA          IRDA
 >-AF_ECONET        Acorn Econet
@@ -86,12 +88,13 @@ Address Families
 >-AF_ENCAP         ENCAP
 >-AF_LAT           LAT
 >-AF_HYLINK        NSC Hyperchannel
->-AF_KEY           Internal key-management function
->-AF_BRIDGE        Multiprotocol Bridge
+>-AF_KEY           Internal key-management function (rfc 2367)
+>-AF_BRIDGE        Multiprotocol Bridge links over rtnetlink (not socket a af)
 >-AF_SDL           SGI Data Link for DLPI
 >-AF_NETWARE       Netware
 >-AF_NDD           NDD
 >-AF_INTF          Debugging use only
+>-AF_QUIPCRTR      Qualcomm IPC Router Interace protocol
 >-AF_COIP          Connection-oriented IP (ST II)
 >-AF_CAIF          Ericsson's Communication CPU to Application CPU interface (CAIF protocol)           
 
