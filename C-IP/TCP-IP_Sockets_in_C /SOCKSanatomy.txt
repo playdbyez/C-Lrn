@@ -17,20 +17,88 @@ Hence it is commonly assigned with an lvalue (int sockFD = socket();)
 
 
 Address Families
->-INET  
->-ALG  
->-APPLETALK  
->-ASH  
->-ATMPVC  
->-ATMSVC  
->-AX25  
->-BLUETOOTH  
->-BRIDGE  
->-CAIF  
->-CAN  
->...
+>-AF_UNSPEC        Unspecified
+>-AF_ARP           ARP (rfc 826)
+>-AF_ASH           UART communication protocol
+>-AF_SIP           Simple Internet Protocol
+>-AF_INET          IPv4 Internet protocols
+>-AF_INET6         IPv6 Internet protocols 
+>-AF_UNIX          Local communication
+>-AF_LLC           Logical link control protocol
+>-AF_DLI           Direct data link interface
+>-AF_WAN           Wide Area Network protocols
+>-AF_CNT           Computer Network Technology
+>-AF_CTF           Common Trace Facility
+>-AF_ROUTE         Internal Routing Protocol (=)
+>-AF_NETLINK       Internal Routing protocol (=)
+>-AF_802           IEEE 802.2 / ISO 8802
+>-AF_ISO           ISO protocols
+>-AF_NIT           Network Interface Tap
+>-AF_IPX           IPX - Novel protocols
+>-AF_RDS           Reliable Datagram Sockets
+>-AF_AX25          Amateur radio AX.25 protocol
+>-AF_ROSE          Amateur radio X.25 PLP
+>-AF_NETROM        Amateur radio NetROM
+>-AF_X25           ITU-T X.25 / ISO-8208 protocol
+>-AF_BLUETOOTH     Btooth low-level protocol
+>-AF_PACKET        Low-level packet interface 
+>-AF_PPPOX         Generic PPP transport layer for L2 tunnels (L2TP and PPPoE)
+>-AF_APPLETALK     AppleTalk
+>-AF_DECnet        DECet protocol sockets
+>-AF_KEY           Key management protocol (IPsec)
+>-AF_NETLINK       Kernel user interface device
+>-AF_ALG           Interface to kernel crypto API
+>-AF_VSOCK         Hypervisor-guest communication protocol (VMWare VSockets) 
+>-AF_KCM           Kernel connection multiplexer internface (KCM)
+>-AF_TIPC          Cluster domain sockets protocol
+>-AF_CAN           Controller Area Network Automotive bus protocol
+>-AF_IB            InfiniBand native addressing
+>-AF_MPLS          Multiprotocol Label Switching
+>-AF_IB            InfiniBand native addressing
+>-AF_XDP           Express Data Path interface
+>-AF_IMPLINK       ARPANET IMP addresses
+>-AF_PUP           PUP protocols (BSP)
+>-AF_CHAOS         MIT CHAOS protocols
+>-AF_NS            XEROX NS protocols
+>-AF_NETMAN        DNA Network Management
+>-AF_NBS           NBS protocols
+>-AF_NETBIOS       NetBios-style addresses
+>-AF_ECMA          European Computer Manufcturers
+>-AF_OSI           OSI families
+>-AF_OSINET        AFI
+>-AF_GOSSIP        USA Government OSI
+>-AF_DATAKIT       Datakit protocols
+>-AF_CCITT         CCITT protocols 
+>-AF_SNA           IBM SNA
+>-AF_DECnet        DECnet
+>-AF_WANPIPE       Wanpipe API
+>-AF_NATM          Native ATM Access
+>-AF_ATMSVC        ATM SVCs (Asynchronous Transfer Mode)
+>-AF_ATMPVC        ATM PVCs
+>-AF_ISDN          Integrated Services Digital Network
+>-AF_IRDA          IRDA
+>-AF_ECONET        Acorn Econet
+>-AF_SECURITY      Security callback pseudo AF
+>-AF_NETBEUI       Netbeui 802.LLC
+>-AF_RIF           Raw interface
+>-AF_RAW           Link layer interface
+>-AF_LINK          Link layer interface
+>-AF_ENCAP         ENCAP
+>-AF_LAT           LAT
+>-AF_HYLINK        NSC Hyperchannel
+>-AF_KEY           Internal key-management function
+>-AF_BRIDGE        Multiprotocol Bridge
+>-AF_SDL           SGI Data Link for DLPI
+>-AF_NETWARE       Netware
+>-AF_NDD           NDD
+>-AF_INTF          Debugging use only
+>-AF_COIP          Connection-oriented IP (ST II)
+>-AF_CAIF          Ericsson's Communication CPU to Application CPU interface (CAIF protocol)           
+
+
 
 Data Types
+>-SOCKET_STREAM
 >-SOCKET_CLOEXEC  
 >-SOCKET_DCCP  
 >-SOCKET_DGRAM  
