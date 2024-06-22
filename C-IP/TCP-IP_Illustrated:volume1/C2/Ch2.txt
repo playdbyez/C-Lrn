@@ -16,12 +16,10 @@ Prefixes are then, managed by Provider Aggregatable or Provider-Independent addr
 PA addresses are known as non-portable
 PI addresses can be directly requested from authorities and work with any ISP.
 
-Internet Service Providers can operate as private or government funded organizations that manage autonomous system nodes (AS) interconnected within the global internet.
-Their scale is made up of roughly 40,000 nodes.
-ISPs make use of Autonomous System numbers together with their routing protocols, within multicast addresses
-Database records of ISPs' routing policies come in different langauges like Routing Policy Specification Langauge (RPSL)
-IPv4 addresses can be embeded within an IPv6 address in 6 different ways, with the help of an address translator.
 
+Database records of ISPs' routing policies come in different langauges like Routing Policy Specification Langauge (RPSL)  
+ISPs make use of Autonomous System numbers together with their routing protocols, within multicast addresses.
+IPv4 addresses can be embeded into an IPv6 address within 6 different ways, with the help of an address translator
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 		DNS Conversion
