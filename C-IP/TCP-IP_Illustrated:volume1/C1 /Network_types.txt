@@ -13,6 +13,7 @@ Distributed Processing
 
 Parallel Processing
 // Spreading a process across separate processors that share the same SINGULAR memory location
+// AKA threads
 
 Remote Procedure Call (RPC)
 Remote Method Invoction (RMI)
