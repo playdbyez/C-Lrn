@@ -1,0 +1,81 @@
+[ ] Interprocess Communication (IPC) [ ]
+
+Concurrent processes may be either Independent Processes or Cooperating Processes.
+ 
+Independent Processes - Cannot affect or be affected by other processes within the system
+Cooperating Processes - Processes that can affect and be affected by other executing processes within the system
+		        These usually cooperate by sharing data, where interprocess comms takes place.
+ 
+>> Benefits of cooperating processes
+ 
+[] Information Sharing 
+    (shared file)
+ 
+[] Computation speedup
+    (sharing computation between threads)
+ 
+[] Modularity
+    (dividing a system into different modules)
+ 
+[] Convenience 
+    (Multi-tasking through concurrently running apps)
+ 
+ 
+########################################### IPC MODELS ###################################################
+>> In order to communicate, the use of IPC models is required
+ 
+//
+[]  Shared memory
+     - A permanent region of memory is established for storing the information.
+     - Occurs without kernel notification 
+
+Operating system's default configurations specify that a process cannot access another process's memory space.
+Thus, the OS requires that both processes agree to remove this restriction in order to use shared memory as an IPC mechanism.
+ 
+	1. The shared memory region resides in the address space of the process creating said memory segment
+	2. Other processes must attach said segment to their own address spaces
+ 
+
+
+
+//
+[] Message Passing
+    - Messages are shared between cooperating processes
+    - First process notifies the kernel and in turn it notifies the second process
+
+>> Implementation
+1. Naming
+	a. Direct Communication 
+		(processes specify the name of the reciever or sender)
+ 
+	b. Indirect Communication
+		(processes specify a mediator for sender and reciever)
+		(mediator's port address is usually within kernel space) 
+ 
+ 
+2. Synchronization
+	a. blocked sender / blocked reciever [Synchronous]
+		(blocked sender communication implies that the sender must wait for the receiver to ack )
+		(blocked receiver communication implies that the receiver must wait for the sender to ack the sent message)
+ 
+	b. non-blocked sender/ non-blocked reciever [Asynchronous]
+		(non-blocked sender communication implies that the sender continues operation regardless of the receiver)
+ 
+3. Buffering
+	a. Zero capacity
+		(Since there is no storage buffer, the sender must wait for the receiver)
+ 
+	b. Finite capacity
+		(Since the size of the buffer is limited, if the buffer queue is full then the sender must wait)
+ 
+	c. Infinite capacity
+		(There is no need to wait for the sender and the receiver is always available)
+
+
+
+#######################################################################
+
+> Producer Consumer Problem
+	-Useful to illustrate OS operations.
+	- A compiler produces assembly to be consumed by an assembler 
+	  and it, in turn, produces object modules to be consumed by the loader. 
