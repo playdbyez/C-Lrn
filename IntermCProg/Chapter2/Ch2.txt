@@ -47,6 +47,8 @@ pushes it into the stack above main.
 
 The above process is done recursively until the first function to be called by main sits on top of the stack.
 
+On a given system, sizeof() intmax_t and uintmax_t determine the maximum value that the compiler and the platform support.
+
 
 
 
