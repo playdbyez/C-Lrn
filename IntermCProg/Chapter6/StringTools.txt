@@ -46,6 +46,9 @@ int val = (int) strtol(str, NULL, 10);
  (OUTPUT: val = 123 )
 
 
+>> Zip Files
+#include <stddef.h>
+zipWith();
 
 
 
