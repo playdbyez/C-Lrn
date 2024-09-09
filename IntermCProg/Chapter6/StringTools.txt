@@ -80,3 +80,28 @@ free (dest);
 
 
 
+//Store Execution Output
+
+FILE *fp;
+char path[5000];
+
+fp = popen(<string>, "r");
+	while (fgets(path, sizeof(path), fp) != NULL)
+	{strcat(<string2>, path);}
+
+
+
+//Execution
+system(<string>);
+
+
+//Convert to string
+sprintf(targetStr,integer);
+
+//convert char to float
+atof(<val>);
+
+//Convert char to int
+atoi(<val>);
+
+
