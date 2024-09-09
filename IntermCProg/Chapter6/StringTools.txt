@@ -74,3 +74,10 @@ char * dest = strdup (src);
 free (dest);
 
 
+>> Convert int to string
+// can convert an int value to hexidecimal, binary or decimal string representation
+int a = 87654;
+char str[20];
+itoa(a,buffer,10); //decimal
+itoa(a,buffer,2); //binary
+itoa(a,buffer,16); //hex
