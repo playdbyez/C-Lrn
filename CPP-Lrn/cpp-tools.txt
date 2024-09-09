@@ -44,3 +44,86 @@ Operators:
 	
 	;
 
+
+
+######################################################################################################################################
+######################################################################################################################################
+                #############################################################################################
+:::::::::::::::::::::::::::::::::::::::::::::#########         C++         ###########:::::::::::::::::::::::::::::::::::::::::::::::::
+
+//Timer
+#include<chrono>
+auto start = std::chrono::high_resolution_clock::now();
+{Code here}
+auto stop = std::chrono::high_resolution_clock::now();
+auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+
+cout << "\n" << duration.count() << " microseconds" ;
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+//If element exists in vector
+if (std:: find (v.begin(), v.end(), elem) != v.end ())
+{
+//elem exists in the vector
+}
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+//Ternary operator
+int mxNumber = 10 > 15 ? 10 : 15;
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+//cpp11 multidimensional array + vector
+int a1[3][3] = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
+std::vector<std::vector<int>> a2 = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+//Determine lenght of a single int with a multi-digit value
+int len = to_string(n).length();
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+//Remove specific element
+vec.erase(remove(vec.begin(), vec.end(), 0), vec.end());
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+//Even or Odd
+return (num %2 ==0)?"Even":"Odd";
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+//find position of minElement
+auto it = std::min_element(std::begin(vec), std::end(vec));
+std::cout << "index of smallest element: " << std::distance(std::begin(vec), it);
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+//Do/While
+do{ } 
+        while(next_permutation(v.begin(),v.end()));
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+//Random Number Generator within range min - max
+//Srand will maintain the random value stored and consistant
+//Remove srand for more variance
+#include <cstdlib>
+srand (time(NULL));
+int range = max - min +1;
+int num = rand() %range + min;
+
+
+// Alternative random number generator from 0 to 50
+
+#include <random>
+
+random_device rd;
+
+uniform_int_distribution<int> range(0 , 50);
+val = range(rd);
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
