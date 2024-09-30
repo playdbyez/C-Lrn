@@ -1,0 +1,64 @@
+#########:: FORMAT STRING ATK ::##########
+
+> Discovered circa 2001, it is rarely used today
+
+> Implemented via C language and its formatting text functions
+
+> This type of binary exploit occurs when an input submited is evaluated as a command by the application.
+
+> The input is designed to change the behvaiour of the format function and cause new behaviours 
+  that can compromise the security or the stability of the system.
+
+> The method to alter the system can range from code execution to 
+  reading the stack and causing a segmentation fault or a denial of service attack
+
+I.E.
+If the application uses Format Functions in the source-code, that can interpret formatting 
+characters then the attacker could insert formating characters in a form of the website.
+So if the printf() function is used to print the username inserted in some fields of the page then the attack bellow can be used:
+
+printf(userName)
+
+
+################### ########################## COMPONENTS #################### ##################################
+
+[] Format Function  = converts primitive variables of the language into a string                     ( printf() or fprintf() )
+[] Format String    = argument to the Format function its defined as the Text + Format Parameters    ( "this is a %s", strpt )
+[] Format Parameter = defines the conversion of the Format Function                                  (        %x or %s       )
+
+
+
+################### ########################## USEFUL FORMAT PAREMETERS #################### ##################################
+
+[ref] - %%      = character (literal)
+[ref] - %p      = external representation of a pointer to void
+[val] - %d      = decimal
+[   ] - %c      = character
+[val] - %u      = unsigned decimal
+[val] - %x      = hexadecimal
+[ref] - %s      = string
+[ref] - %n      = writes the number of characters into a pointer
+
+
+|| ##################### ########################## EXPOSED FUNCTIONS #################### ################################## ||
+Functions that request the length of file as a parameter are  more secure
+
+[] fprintf()        = writes printf to a file
+[] printf()         = output formatted string
+[] sprintf()        = convert and print into a string
+[] snprintf()       = prints into a string + length check
+[] vfprintf()       = prints the va_arg structure to a file
+[] vprintf()        = prints the va_arg structure to stdout
+[] vsprintf()       = prints the va_arg to a string
+[] vsnprintf()      = prints the va_arg to a string + length check
+
+### The point of using certain format paramenters:
+> %x   =   reading data from the stack
+> %s   =   read characters from the process' memory
+> %n   =   write an int to locations in the process' memory
+> %n$x =   read the from the stack at string index n (> 7%x )
+
+
+https://ctf101.org/binary-exploitation/what-is-a-format-string-vulnerability/
+https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/13-Testing_for_Format_String_Injection
+https://cs155.stanford.edu/papers/formatstring-1.2.pdf
