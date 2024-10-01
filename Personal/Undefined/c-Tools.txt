@@ -1,0 +1,167 @@
+######################################################################################################################################
+######################################################################################################################################
+                #############################################################################################
+:::::::::::::::::::::::::::::::::::::::::::::#########         C           ###########:::::::::::::::::::::::::::::::::::::::::::::::::
+
+//Clock Function
+#include <time.h>
+
+clock_t start , end;
+start = clock();
+//function
+end = clock();
+
+printf("%f", (double) (end - start) / CLOCKS_PER_SEC);
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+//Empy an array
+#include <stdlib.h>
+bzero(arr, sizeof arr)
+
+//clear non-string array
+memset(arr, '\0', sizeof (char));
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+//Only works with counted arrays not strings
+//insert nullptr instead of the last character within an array
+#include <stdlib.h>
+memset(arr+strlen(arr)-1, '\0', sizeof (char));
+
+
+//insert dot(.) as a range from arr[5] to 6 characters ahead (arr[11])
+memset(arr+6, '.', 6*sizeof (char));
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+//length of an Int object
+// returns error if the int is 0
+
+#include <math.h>
+int nDigits = log10(n) + 1;
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+// to_string version of C 
+
+int someInt = 368;
+char str[12];
+sprintf(str, "%d", someInt);
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+//returning a heap-allocated output == malloc the output
+ // since SPRINTF is very specific a change of type casting was necessary
+   // buff had to be allocated as apointer because the function that encapsulates it was a pointer
+
+
+char val = '5';
+size_t size = 10;
+char *buff = malloc(strlen(val)*sizeof(char));  
+sprintf(buff, "%d/%d", val,(int)size);
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+// Sort function
+// the comp struct will return a negative (-1) in order to sort a list in Ascending order
+// List can also be sorted in Descending order by returning a positive value (1)
+
+int comp(const void *a,const void *b) {
+                                        int x = *((int *) a);
+                                        int y = *((int *) b);
+                                        if (x > y){return 1;}
+                                        if (y > x){return -1;}
+                                                                              }
+
+char unsorted_list [20]
+qsort (unsorted_list,20, sizeof *unsorted_list,comp);
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+//Random Number Generator within range min - max
+
+#include <stdlib.h>
+#include <time.h>
+srand (time(NULL));
+int range = max - min +1;
+int num = rand() %range + min;
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+//lenght of rows in an 2D-array
+
+sizeof arr/ size of arr[0]
+
+
+//lenght of columns in an 2D-array
+
+sizeof arr[0]/ size of arr[0][0]
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+// Random N# generator from 0 to 49
+
+#include <stdlib.h>
+#include <time.h>
+
+srand((unsigned) time(NULL));
+
+unsigned val = rand() % 50;
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+>> Zip Files
+#include <stddef.h>
+zipWith();
+
+
+>>> Hash function
+#include <openssl/md5.h>
+#include <stdlib.h>
+
+
+>>> Store Execution Output
+FILE *fp;
+char path[5000];
+fp = popen(<string>, "r");
+	while (fgets(path, sizeof(path), fp) != NULL)
+	{strcat(<string2>, path);}
+
+
+//Execution
+system(<string>);
+
+
+//Convert to string
+sprintf(targetStr,integer);
+
+//convert char to float
+atof(<val>);
+
+//Convert char to int
+atoi(<val>);
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+// Consult max values per datatype via the <limits.h> library macros
+
+#include <limits.h>
+CHAR_BIT
+SCHAR_MIN
+SCHAR_MAX
+UCHAR_MAX
+CHAR_MIN
+CHAR_MAX
+MB_LEN_MAX
+SHRT_MIN.
+SHRT_MAX
+USHRT_MAX
+INT_MIN	
+INT_MAX	
+UINT_MAX
+LONG_MIN
+LONG_MAX
+ULONG_MAX
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
