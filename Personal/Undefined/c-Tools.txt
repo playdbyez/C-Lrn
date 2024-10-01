@@ -150,7 +150,6 @@ atoi(<val>);
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-
 // Consult max values per datatype via the <limits.h> library macros
 
 #include <limits.h>
@@ -170,4 +169,24 @@ UINT_MAX
 LONG_MIN
 LONG_MAX
 ULONG_MAX
+
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+// Dynamically allocating a One Dimensional Array 
+int *ptr
+ptr = (int*) malloc (7 * sizeof (int));
+
+free (ptr);
+
+
+// Dynamically allocating a Two-Dimensional Array 
+int *ptr
+ptr = (int*) malloc (7 * sizeof (int*));
+  for (int i  = 0; i< 7 ; i++){ ptr[i] = malloc (3 * sizeof (int)); }
+
+for (int i  = 0; i< 7 ; i++){free(ptr[i]);}
+free (ptr);
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
