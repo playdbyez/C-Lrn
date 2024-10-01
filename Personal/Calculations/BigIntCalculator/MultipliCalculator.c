@@ -1,7 +1,7 @@
 //https://www3.cs.stonybrook.edu/~skiena/algorist/book/programs/bignum.c
 //https://gmplib.org/
 //www.calculator.net/big-number-calculator.html
-
+// consider using a while loop till EOF if the string is too large for ULLONG_MAX value
 
 
 
