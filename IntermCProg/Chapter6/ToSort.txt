@@ -1,0 +1,3 @@
+C-Lrn/Beginning_programming_CforD/Intro/printfobj.txt
+C-Lrn/IntermCProg/Chapter6/FstringATK.txt
+C-Lrn/The-C/Ch1/printf.txt
