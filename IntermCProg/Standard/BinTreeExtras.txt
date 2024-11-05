@@ -1,2 +1,0 @@
- > When the root node is deleted, the next root will be the smallest value found within the right-subtree
-> Understanding the traversal orders of search trees will help understand how to read its output in a non-graphical representation
