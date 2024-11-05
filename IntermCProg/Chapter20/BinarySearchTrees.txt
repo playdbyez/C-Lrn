@@ -47,4 +47,12 @@ Binary Trees structures also vary in composition:
 
 
 
+ ############################### :: IMPLEMENTATION :: ################################
 
+#include <stdio.h>
+
+typedef struct treenode{
+struct treenode * right;
+struct treenode * left
+int value;
+}treeNode;
