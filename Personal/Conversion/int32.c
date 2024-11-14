@@ -122,42 +122,57 @@ if (n>255){
     }
 
 
-/// Play with diz
+###################
+// v2
 
 #include  <stdio.h>
-#include  <math.h>
 #include  <stdint.h>
 #include  <stdlib.h>
-#include  <time.h>
 
-int *arrGen(int size)
+static void printArray (char *arr, uint8_t len);//prints binArray
+
+char *arrBin(uint16_t size, uint32_t n)
 {
   if (size <= 0){return -1;}
-  int *arr = malloc (sizeof(int) * size);
+  char *arr = malloc (sizeof(char) * size);
   if (arr == NULL) {return -1;}
-  srand(time(NULL));
-  int ind;
-  arr[0] = rand() % 1000;
-  for (ind = 1; ind < size; ind++)
-        {  arr[ind] = arr[ind-1]+(rand() % 1000) +1;  }
+  
+    uint8_t inc = 0;;
+    for (int8_t i = 31; i >= 0; i--){ 
+        
+        if (inc == 8){ arr[inc] = '.'; inc++;}    
+        if (inc == 17){arr[inc] = '.'; inc++;}
+        if (inc == 25){arr[inc] = '.'; inc++;}
+        
+        if ( (n &(1<<i)) == 0) {arr[inc] = '0';inc++; }
+        if ( (n &(1<<i)) != 0) {arr[inc] = '1';inc++; }
+          
+    }
  return arr; 
 }
 
-static void printArray (int *arr, uint8_t len)
-{
-  
-  for (int i = 0; i <  len; i++)
-    { printf("%d ",arr[i]);}
-    printf("\n");
-    return;
-}
 
 
 
 int main()
 {
-   int *arr = arrGen(10);
-  printArray(arr, 10);
+    uint32_t n = 3021966218;
     
+   int *arr = arrBin(36, n);
+  printArray(arr, 36);
+    free(arr);
 }
+
+
+
+
+static void printArray (char *arr, uint8_t len)
+{
+  
+  for (int i = 0; i <  len; i++)
+    { printf("%c",arr[i]);}
+    printf("\n");
+    return;
+}
+
 
