@@ -3,3 +3,4 @@
 [] Detecting obfuscated scripting languages is a basic primary method of attack mitigation
 
 attack.mitre.org/versions/v13/techniques/T1027/010/
+cisa.gov/known-exploited-vulnerabilities-catalog
