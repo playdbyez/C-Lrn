@@ -4,7 +4,7 @@
 
 OS-provided methods for processes to manage shared data between them.
 A method of message passing can be either synchronous or asynchronous.
-Employs the use of a client/server model where roles alternate between processes.
+Employs the use of a client-server interaction where roles alternate between processes.
 Concurrent processes may be either Independent Processes or Cooperating Processes.
 
 
@@ -96,3 +96,23 @@ Thus, the OS requires that both processes agree to remove this restriction in or
 		(There is no need to wait for the sender and the receiver is always available)
 
 
+
+###################  [] Remote Procedure Call (RPC) [ ] ###############
+Bound to ditributed computing topologies unlike Local Procedure Calls
+Occurs when a process causes a procedure/subroutine to execute on a different address space within the network
+Employes a client–server interaction implemented via a request–response protocol.
+There is a high level of incompatibility amongst RPC protocols.
+
+
+< Synchronous RPC model >
+> Client initiates a RPC request to a remote server
+> Server processes RPC
+> Client is blocked and must wait for a response from the server 
+> Server responds and the application continues
+
+
+< Asynchronous RPC model >
+> Client initiates a XMLHttpRequest to server
+> Server processes asynchronous RPC
+> Client remains open,   
+> Server responds and the application continues
