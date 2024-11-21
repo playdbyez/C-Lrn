@@ -1,0 +1,21 @@
+#### Scripting obfuscation ###
+[] Used against Defense Evasion tools
+[] Detecting obfuscated scripting languages is a basic primary method of attack mitigation
+
+attack.mitre.org/versions/v13/techniques/T1027/010/
+cisa.gov/known-exploited-vulnerabilities-catalog
+
+
+
+https://attack.mitre.org/versions/v13/datasources/DS0017/
+
+  >>https://posts.specterops.io/code-signing-certificate-cloning-attacks-and-defenses-6f98657fc6ec
+
+
+  >>https://confluence.atlassian.com/confkb/how-to-enable-command-line-audit-logging-in-linux-956166545.html
+  >>https://svch0st.medium.com/event-log-tampering-part-1-disrupting-the-eventlog-service-8d4b7d67335c
+
+
+  >>https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh994565(v%3Dws.11)
+  >>https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-8.1-and-8/jj554668(v=ws.11)?redirectedfrom=MSDN
+  >>https://learn.microsoft.com/en-us/sysinternals/downloads/sigcheck
