@@ -176,3 +176,24 @@ static void printArray (char *arr, uint8_t len)
 }
 
 
+//inside main
+ uint32_t tt = 0;
+    uint32_t inc = 1;
+    for (uint8_t i = 0; i < 4; i++){
+     for (uint8_t j = 27; j < 36; j++){
+        if (arr[26] == '1' && i == 0) {tt = 1;}
+        if (arr[18] == '1'&& i == 1) {tt = 1;}
+        if (arr[9] == '1'&& i == 2) {tt = 1;}
+        if (arr[0] == '1'&& i == 3) {tt = 1;}
+         
+         inc*=2;
+         if (arr[j] == '1'){tt+=inc;}
+         
+        
+     }
+        
+        inc = 1;
+        if(i == 1){j = 19}
+        if(i == 2){j = 10}
+    }
+
